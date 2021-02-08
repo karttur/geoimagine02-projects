@@ -1,0 +1,81 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "system"
+  },
+  "period": {
+    "startyear": 2015,
+    "startmonth": 3,
+    "startday": 31,
+    "endyear": 2018,
+    "endmonth": 12,
+    "endday": 31,
+    "timestep": "1D"
+  },
+  "process": [
+    {
+      "processid": "DownLoadSmapDaac",
+      "dsversion": "1.3",
+      "parameters": {
+        "remoteuser": "Gumbricht",
+        "product": "SPL3FTP",
+        "version": "002",
+        "serverurl": "https://n5eil01u.ecs.nsidc.org/"
+      },
+      "dstpath": {
+        "volume": "Karttur3tb",
+        "hdr": "shp",
+        "dat": "shp"
+      }
+    },
+    {
+      "processid": "DownLoadSmapDaac",
+      "dsversion": "1.3",
+      "parameters": {
+        "remoteuser": "Gumbricht",
+        "product": "SPL3FTP-E",
+        "version": "002",
+        "serverurl": "https://n5eil01u.ecs.nsidc.org/"
+      },
+      "dstpath": {
+        "volume": "Karttur3tb",
+        "hdr": "shp",
+        "dat": "shp"
+      }
+    },
+    {
+      "processid": "DownLoadSmapDaac",
+      "dsversion": "1.3",
+      "parameters": {
+        "remoteuser": "Gumbricht",
+        "product": "SPL3SMP",
+        "version": "005",
+        "serverurl": "https://n5eil01u.ecs.nsidc.org/"
+      },
+      "dstpath": {
+        "volume": "Karttur3tb",
+        "hdr": "shp",
+        "dat": "shp"
+      }
+    },
+    {
+      "processid": "DownLoadSmapDaac",
+      "dsversion": "1.3",
+      "parameters": {
+        "remoteuser": "Gumbricht",
+        "product": "SPL3SMP-E",
+        "version": "002",
+        "serverurl": "https://n5eil01u.ecs.nsidc.org/"
+      },
+      "dstpath": {
+        "volume": "Karttur3tb",
+        "hdr": "shp",
+        "dat": "shp"
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plotdbtsclimate>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur-trmm' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+	<period startyear = "1998" startmonth='01' endyear = "2017" endmonth='12' timestep='M'></period>
+	
+	<!-- Plot example 1 -->
+	<processx processid = 'plotdbtsclimate' version = '1.3'>
+		<parameters pdplot='True' title='Climate index'></parameters>
+		<index id ='soi'></index>
+		<index id ='pdo'></index>
+	</processx>
+	
+	<processx processid = 'plotdbtsclimate' version = '1.3'>
+		<parameters pdplot='False' title='Climate index' legend='0' obslinestyle='solid' ylabel='index'></parameters>
+		<index id ='pdo' obsformat = 'g-' ></index>
+		<index id ='nao' obsformat = 'r-' ></index>
+		<index id ='soi' obsformat = 'b-' ></index>
+	</processx>
+	
+	<process processid = 'componentdbtsgraphancillary' version = '1.3'>
+		<!-- yloabel and title could be defaulted from the composition-->
+		<!-- trend alternatives: spline, kernel, median or line -->
+		<!--
+		trend='kernel'
+		kernel = '1,2,3,2,1'
+		naive='True'
+		trend='median'
+		yearfac ='3'
+		prefilterseason='True'
+		-->
+		<parameters 
+		ylabel='pdo'
+		title='Climate index'
+		naive='True'
+		yearfac='1'
+		legend='-99'
+		sharey = 'False'
+		normalize = 'False'
+		standardize = 'False'
+		></parameters>
+		<index id ='co2-mm-mlo' obsformat = 'b-' tendencyformat = 'b-' regressformat = 'b-' seasonformat = 'b-' residualformat = 'b-'></index>
+
+	</process>
+	
+	<processx processid = 'plotdbtsclimate' version = '1.3'>
+		<!-- yloabel and title could be defaulted from the composition-->
+		<!-- trend alternatives: spline, kernel, median or line -->
+		<!--
+		trend='kernel'
+		kernel = '1,2,3,2,1'
+		naive='True'
+		trend='median'
+		yearfac ='3'
+		prefilterseason='True'
+		-->
+		<parameters 
+		ylabel='index'
+		title='Climate index'
+		decompose='True'
+		naive='False'
+		yearfac='1'
+		plotoriginal='False'
+		plottrend='True'
+		legend='0'
+		separate='True'
+		grid='True'
+		></parameters>
+		<index id ='pdo' obsformat = 'g-' tendencyformat = 'g-' trendformat = 'k-'></index>
+		<index id ='nao' obsformat = 'r-' tendencyformat = 'r-' trendformat = 'k-'></index>
+		<index id ='soi' obsformat = 'b-' tendencyformat = 'b-' trendformat = 'k-'></index>
+	</processx>
+	
+	<processx processid = 'autocorrdbtsclimate' version = '1.3'>
+		<!-- yloabel and title could be defaulted from the composition-->
+		<!-- trend alternatives: spline, kernel, median or line -->
+		<!--
+		trend='kernel'
+		kernel = '1,2,3,2,1'
+		naive='True'
+		trend='median'
+		yearfac ='3'
+		prefilterseason='True'
+		-->
+		<parameters 
+		ylabel='autocorrelation'
+		xlabel='month'
+		partial='False'
+		title='Climate index autocorrelation'
+		nlags='12'
+		legend='0'
+		separate='False'
+		width='0.9'
+		grid='True'
+		></parameters>
+		<index id ='pdo' color = 'g' ></index>
+		<index id ='nao' color = 'r' ></index>
+		<index id ='soi' color = 'b' ></index>
+	</processx>
+	
+	<processx processid = 'indexcrosstrendtsgraphancillary' version = '1.3'>
+		<parameters 
+		x='20'
+		y='-20'
+		ylabel='crosscorrelation'
+		xlabel='month'
+		partial='False'
+		title='Climate index crosscorrelation'
+		nlags='12'
+		legend='0'
+		separate='False'
+		width='0.9'
+		grid='True'
+		></parameters>
+		<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+		<srccomp>
+			<trmm-3b43v7-precip  source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f">
+			</trmm-3b43v7-precip>
+		</srccomp>
+		<index id ='pdo' color = 'g' ></index>
+		<index id ='nao' color = 'r' ></index>
+		<index id ='soi' color = 'b' ></index>
+	</processx>
+
+</plotdbtsclimate>

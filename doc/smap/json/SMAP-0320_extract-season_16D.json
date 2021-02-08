@@ -1,0 +1,147 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "smap"
+  },
+  "period": {
+    "startyear": 2015,
+    "startmonth": 4,
+    "startday": 23,
+    "endyear": 2019,
+    "endmonth": 2,
+    "endday": 19,
+    "timestep": "16D"
+  },
+  "process": [
+    {
+      "processid": "ExtractSeasonSmap",
+      "overwrite": false,
+      "parameters": {
+        "validfraction": "0.05"
+      },
+      "srcpath": {
+        "volume": "africa",
+        "hdrfiletype": "tif"
+      },
+      "dstpath": {
+        "volume": "africa",
+        "hdrfiletype": "tif"
+      },
+      "srccomp": {
+        "soil-moisture-avg-16d": {
+          "source": "SPL3SMP.005",
+          "product": "SPL3SMP",
+          "content": "soil-moisture-avg-16d",
+          "layerid": "soil-moisture-avg-16d",
+          "prefix": "soil-moisture-avg-16d",
+          "suffix": "005"
+        }
+      }
+    },
+    {
+      "processid": "ExtractSeasonSmap",
+      "overwrite": false,
+      "parameters": {
+        "validfraction": "0.05"
+      },
+      "srcpath": {
+        "volume": "africa",
+        "hdrfiletype": "tif"
+      },
+      "dstpath": {
+        "volume": "africa",
+        "hdrfiletype": "tif"
+      },
+      "srccomp": {
+        "soil-moisture-avg-16d": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "soil-moisture-avg-16d",
+          "layerid": "soil-moisture-avg-16d",
+          "prefix": "soil-moisture-avg-16d",
+          "suffix": "002"
+        }
+      }
+    },
+    {
+      "processid": "ExtractSeasonSmap",
+      "overwrite": "True",
+      "parameters": {
+        "validfraction": "0.05",
+        "nullaszero": "True"
+      },
+      "srcpath": {
+        "volume": "Pegasus6",
+        "hdrfiletype": "tif"
+      },
+      "dstpath": {
+        "volume": "Pegasus6",
+        "hdrfiletype": "tif"
+      },
+      "srccomp": {
+        "freeze-thaw-fraction-avg-16d": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "freeze-thaw-avg-16d",
+          "layerid": "freeze-thaw-fraction-avg-16d",
+          "prefix": "freeze-thaw-frac-avg-16d",
+          "suffix": "002"
+        }
+      }
+    },
+    {
+      "processid": "ExtractSeasonSmap",
+      "overwrite": false,
+      "parameters": {
+        "validfraction": "0.05"
+      },
+      "srcpath": {
+        "volume": "Pegasus6",
+        "hdrfiletype": "tif"
+      },
+      "dstpath": {
+        "volume": "Pegasus6",
+        "hdrfiletype": "tif"
+      },
+      "srccomp": {
+        "veg-water-avg-16d": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "veg-water-avg-16d",
+          "layerid": "veg-water-avg-16d",
+          "prefix": "veg-water-avg-16d",
+          "suffix": "002"
+        }
+      }
+    },
+    {
+      "processid": "ExtractSeasonSmap",
+      "overwrite": false,
+      "parameters": {
+        "validfraction": "0.05"
+      },
+      "srcpath": {
+        "volume": "africa",
+        "hdrfiletype": "tif"
+      },
+      "dstpath": {
+        "volume": "africa",
+        "hdrfiletype": "tif"
+      },
+      "srccomp": {
+        "water-body-frac-avg-16d": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "water-body-frac-avg-16d",
+          "layerid": "water-body-frac-avg-16d",
+          "prefix": "water-body-frac-avg-16d",
+          "suffix": "002"
+        }
+      }
+    }
+  ]
+}

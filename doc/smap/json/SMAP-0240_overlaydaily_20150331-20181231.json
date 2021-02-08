@@ -1,0 +1,471 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "smap"
+  },
+  "period": {
+    "startyear": 2015,
+    "startmonth": 3,
+    "startday": 31,
+    "endyear": 2018,
+    "endmonth": 12,
+    "endday": 31,
+    "timestep": "1D"
+  },
+  "process": [
+    {
+      "processid": "ConditionalSmapOverlay",
+      "dsversion": "1.3",
+      "acceptmissing": true,
+      "parameters": {
+        "method": "avg",
+        "template": "soil-moisture-am"
+      },
+      "srcpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "dstpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "srccomp": {
+        "layer1": {
+          "source": "SPL3SMP.005",
+          "product": "SPL3SMP",
+          "content": "soil-moisture-am",
+          "layerid": "soil-moisture-am",
+          "prefix": "soil-moisture-am",
+          "suffix": "005"
+        },
+        "layer2": {
+          "source": "SPL3SMP.005",
+          "product": "SPL3SMP",
+          "content": "soil-moisture-pm",
+          "layerid": "soil-moisture-pm",
+          "prefix": "soil-moisture-pm",
+          "suffix": "005"
+        }
+      },
+      "dstcomp": {
+        "layersum": {
+          "source": "SPL3SMP.005",
+          "product": "SPL3SMP",
+          "content": "soil-moisture-avg",
+          "layerid": "soil-moisture-avg",
+          "prefix": "soil-moisture-avg",
+          "suffix": "005"
+        }
+      }
+    },
+    {
+      "processid": "ConditionalSmapOverlay",
+      "dsversion": "1.3",
+      "acceptmissing": true,
+      "parameters": {
+        "method": "min",
+        "template": "soil-moisture-am"
+      },
+      "srcpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "dstpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "srccomp": {
+        "layer1": {
+          "source": "SPL3SMP.005",
+          "product": "SPL3SMP",
+          "content": "soil-moisture-am",
+          "layerid": "soil-moisture-am",
+          "prefix": "soil-moisture-am",
+          "suffix": "005"
+        },
+        "layer2": {
+          "source": "SPL3SMP.005",
+          "product": "SPL3SMP",
+          "content": "soil-moisture-pm",
+          "layerid": "soil-moisture-pm",
+          "prefix": "soil-moisture-pm",
+          "suffix": "005"
+        }
+      },
+      "dstcomp": {
+        "layersum": {
+          "source": "SPL3SMP.005",
+          "product": "SPL3SMP",
+          "content": "soil-moisture-min",
+          "layerid": "soil-moisture-min",
+          "prefix": "soil-moisture-min",
+          "suffix": "005"
+        }
+      }
+    },
+    {
+      "processid": "ConditionalSmapOverlay",
+      "dsversion": "1.3",
+      "acceptmissing": true,
+      "parameters": {
+        "method": "max",
+        "template": "soil-moisture-am"
+      },
+      "srcpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "dstpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "srccomp": {
+        "layer1": {
+          "source": "SPL3SMP.005",
+          "product": "SPL3SMP",
+          "content": "soil-moisture-am",
+          "layerid": "soil-moisture-am",
+          "prefix": "soil-moisture-am",
+          "suffix": "005"
+        },
+        "layer2": {
+          "source": "SPL3SMP.005",
+          "product": "SPL3SMP",
+          "content": "soil-moisture-pm",
+          "layerid": "soil-moisture-pm",
+          "prefix": "soil-moisture-pm",
+          "suffix": "005"
+        }
+      },
+      "dstcomp": {
+        "layersum": {
+          "source": "SPL3SMP.005",
+          "product": "SPL3SMP",
+          "content": "soil-moisture-max",
+          "layerid": "soil-moisture-max",
+          "prefix": "soil-moisture-max",
+          "suffix": "005"
+        }
+      }
+    },
+    {
+      "processid": "ConditionalSmapOverlay",
+      "dsversion": "1.3",
+      "acceptmissing": true,
+      "parameters": {
+        "method": "avg",
+        "template": "soil-moisture-am"
+      },
+      "srcpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "dstpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "srccomp": {
+        "layer1": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "soil-moisture-am",
+          "layerid": "soil-moisture-am",
+          "prefix": "soil-moisture-am",
+          "suffix": "002"
+        },
+        "layer2": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "soil-moisture-pm",
+          "layerid": "soil-moisture-pm",
+          "prefix": "soil-moisture-pm",
+          "suffix": "002"
+        }
+      },
+      "dstcomp": {
+        "layersum": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "soil-moisture-avg",
+          "layerid": "soil-moisture-avg",
+          "prefix": "soil-moisture-avg",
+          "suffix": "002"
+        }
+      }
+    },
+    {
+      "processid": "ConditionalSmapOverlay",
+      "dsversion": "1.3",
+      "acceptmissing": true,
+      "parameters": {
+        "method": "min",
+        "template": "soil-moisture-am"
+      },
+      "srcpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "dstpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "srccomp": {
+        "layer1": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "soil-moisture-am",
+          "layerid": "soil-moisture-am",
+          "prefix": "soil-moisture-am",
+          "suffix": "002"
+        },
+        "layer2": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "soil-moisture-pm",
+          "layerid": "soil-moisture-pm",
+          "prefix": "soil-moisture-pm",
+          "suffix": "002"
+        }
+      },
+      "dstcomp": {
+        "layersum": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "soil-moisture-min",
+          "layerid": "soil-moisture-min",
+          "prefix": "soil-moisture-avg",
+          "suffix": "002"
+        }
+      }
+    },
+    {
+      "processid": "ConditionalSmapOverlay",
+      "dsversion": "1.3",
+      "acceptmissing": true,
+      "parameters": {
+        "method": "max",
+        "template": "soil-moisture-am"
+      },
+      "srcpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "dstpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "srccomp": {
+        "layer1": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "soil-moisture-am",
+          "layerid": "soil-moisture-am",
+          "prefix": "soil-moisture-am",
+          "suffix": "002"
+        },
+        "layer2": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "soil-moisture-pm",
+          "layerid": "soil-moisture-pm",
+          "prefix": "soil-moisture-pm",
+          "suffix": "002"
+        }
+      },
+      "dstcomp": {
+        "layersum": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "soil-moisture-max",
+          "layerid": "soil-moisture-max",
+          "prefix": "soil-moisture-avg",
+          "suffix": "002"
+        }
+      }
+    },
+    {
+      "processid": "ConditionalSmapOverlay",
+      "dsversion": "1.3",
+      "acceptmissing": true,
+      "parameters": {
+        "method": "avg",
+        "template": "freeze-thaw-am"
+      },
+      "srcpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "dstpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "srccomp": {
+        "layer1": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "freeze-thaw-am",
+          "layerid": "freeze-thaw-fraction",
+          "prefix": "freeze-thaw-fraction",
+          "suffix": "002"
+        },
+        "layer2": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "freeze-thaw-pm",
+          "layerid": "freeze-thaw-fraction-pm",
+          "prefix": "freeze-thaw-fraction-pm",
+          "suffix": "002"
+        }
+      },
+      "dstcomp": {
+        "layersum": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "freeze-thaw-avg",
+          "layerid": "freeze-thaw-fraction-avg",
+          "prefix": "freeze-thaw-frac-avg",
+          "suffix": "002"
+        }
+      }
+    },
+    {
+      "processid": "ConditionalSmapOverlay",
+      "dsversion": "1.3",
+      "acceptmissing": true,
+      "parameters": {
+        "method": "avg",
+        "template": "veg-water-am"
+      },
+      "srcpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "dstpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "srccomp": {
+        "layer1": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "veg-water-am",
+          "layerid": "vegetation-water-content",
+          "prefix": "vegetation-water-content",
+          "suffix": "002"
+        },
+        "layer2": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "veg-water-pm",
+          "layerid": "vegetation-water-content-pm",
+          "prefix": "vegetation-water-content-pm",
+          "suffix": "002"
+        }
+      },
+      "dstcomp": {
+        "layersum": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "veg-water-avg",
+          "layerid": "veg-water-avg",
+          "prefix": "veg-water-avg",
+          "suffix": "002"
+        }
+      }
+    },
+    {
+      "processid": "ConditionalSmapOverlay",
+      "dsversion": "1.3",
+      "acceptmissing": true,
+      "parameters": {
+        "method": "avg",
+        "template": "veg-water-am"
+      },
+      "srcpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "dstpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "srccomp": {
+        "layer1": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "water-body-fraction-am",
+          "layerid": "radar-water-body-fraction",
+          "prefix": "radar-water-body-fraction",
+          "suffix": "002"
+        },
+        "layer2": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "water-body-fraction-pm",
+          "layerid": "radar-water-body-fraction-pm",
+          "prefix": "radar-water-body-fraction-pm",
+          "suffix": "002"
+        }
+      },
+      "dstcomp": {
+        "layersum": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "water-body-fraction-avg",
+          "layerid": "radar-water-body-fraction-avg",
+          "prefix": "radar-water-body-fraction-avg",
+          "suffix": "002"
+        }
+      }
+    },
+    {
+      "processid": "ConditionalSmapOverlay",
+      "dsversion": "1.3",
+      "acceptmissing": true,
+      "parameters": {
+        "method": "avg",
+        "template": "veg-water-am"
+      },
+      "srcpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "dstpath": {
+        "volume": "africa",
+        "hdr": "tif"
+      },
+      "srccomp": {
+        "layer1": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "water-body-fraction-am",
+          "layerid": "static-water-body-fraction",
+          "prefix": "static-water-body-fraction",
+          "suffix": "002"
+        },
+        "layer2": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "water-body-fraction-pm",
+          "layerid": "static-water-body-fraction-pm",
+          "prefix": "static-water-body-fraction-pm",
+          "suffix": "002"
+        }
+      },
+      "dstcomp": {
+        "layersum": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "water-body-fraction-avg",
+          "layerid": "static-water-body-fraction-avg",
+          "prefix": "static-water-body-fraction-avg",
+          "suffix": "002"
+        }
+      }
+    }
+  ]
+}

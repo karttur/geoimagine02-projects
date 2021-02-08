@@ -1,0 +1,301 @@
+{
+  "postgresdb": {
+    "db": "geoimagine"
+  },
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "system"
+  },
+  "period": {
+    "timestep": "static"
+  },
+  "process": {
+    "processid": "OrganizeAncillary",
+    "parameters": {
+      "importcode": "shp",
+      "epsg": "4326",
+      "orgid": "naturalearth",
+      "dsname": "110m",
+      "dsversion": "1.0",
+      "accessdate": "20190420",
+      "defregid": "global",
+      "regioncat": "global",
+      "dataurl": "",
+      "metaurl": "",
+      "title": "1:110m Physical Vectors",
+      "label": "1:110m Physical Vectors",
+      "copyright": "unknwon",
+      "replacestr": "",
+      "replacetag": ""
+    },
+    "srcpath": {
+      "volume": "africa",
+      "hdr": "shp",
+      "dat": ""
+    },
+    "dstpath": {
+      "volume": "africa",
+      "hdr": "shp",
+      "dat": ""
+    },
+    "srcraw": [
+      {
+        "id": "ne-110m-land",
+        "datadir": "ANCILIMPORT/NaturalEarth/110m_physical",
+        "datafile": "ne_110m_land",
+        "datalayer": "land",
+        "title": "Global land mask",
+        "label": "Land polygons including major islands, 1:110m.",
+        "cellnull": 0
+      },
+      {
+        "id": "ne-110m-lakes",
+        "datadir": "ANCILIMPORT/NaturalEarth/110m_physical",
+        "datafile": "ne_110m_lakes",
+        "datalayer": "water",
+        "title": "Global lake mask",
+        "label": "Natural and artificial lakes. 1:110m."
+      },
+      {
+        "id": "graticules-1deg",
+        "datadir": "ANCILIMPORT/NaturalEarth/110m_physical",
+        "datafile": "ne_110m_graticules_1",
+        "datalayer": "graticule",
+        "title": "Graticule longitue latitude",
+        "label": "Graticule longitue latitude at 1 degree"
+      },
+      {
+        "id": "graticules-5deg",
+        "datadir": "ANCILIMPORT/NaturalEarth/110m_physical",
+        "datafile": "ne_110m_graticules_5",
+        "datalayer": "graticule",
+        "title": "Graticule longitue latitude",
+        "label": "Graticule longitue latitude at 1 degree"
+      },
+      {
+        "id": "graticules-10deg",
+        "datadir": "ANCILIMPORT/NaturalEarth/110m_physical",
+        "datafile": "ne_110m_graticules_10",
+        "datalayer": "graticule",
+        "title": "Graticule longitue latitude",
+        "label": "Graticule longitue latitude at 1 degree"
+      },
+      {
+        "id": "graticules-15deg",
+        "datadir": "ANCILIMPORT/NaturalEarth/110m_physical",
+        "datafile": "ne_110m_graticules_15",
+        "datalayer": "graticule",
+        "title": "Graticule longitue latitude",
+        "label": "Graticule longitue latitude at 1 degree"
+      },
+      {
+        "id": "graticules-20deg",
+        "datadir": "ANCILIMPORT/NaturalEarth/110m_physical",
+        "datafile": "ne_110m_graticules_20",
+        "datalayer": "graticule",
+        "title": "Graticule longitue latitude",
+        "label": "Graticule longitue latitude at 1 degree"
+      },
+      {
+        "id": "graticules-30deg",
+        "datadir": "ANCILIMPORT/NaturalEarth/110m_physical",
+        "datafile": "ne_110m_graticules_30",
+        "datalayer": "graticule",
+        "title": "Graticule longitue latitude",
+        "label": "Graticule longitue latitude at 1 degree"
+      },
+      {
+        "id": "graticules-45deg",
+        "datadir": "ANCILIMPORT/NaturalEarth/110m_physical",
+        "datafile": "ne_110m_graticules_45",
+        "datalayer": "graticule",
+        "title": "Graticule longitue latitude",
+        "label": "Graticule longitue latitude at 1 degree"
+      },
+      {
+        "id": "graticules-90deg",
+        "datadir": "ANCILIMPORT/NaturalEarth/110m_physical",
+        "datafile": "ne_110m_graticules_90",
+        "datalayer": "graticule",
+        "title": "Graticule longitue latitude",
+        "label": "Graticule longitue latitude at 1 degree"
+      }
+    ],
+    "dstcomp": [
+      {
+        "ne-110m-land": {
+          "masked": "Y",
+          "measure": "N",
+          "source": "naturalearth",
+          "product": "land",
+          "content": "land",
+          "layerid": "ne-110m-land",
+          "prefix": "ne-110m-land",
+          "suffix": "0",
+          "scalefac": "1",
+          "offsetadd": "0",
+          "dataunit": "boundary",
+          "celltype": "vector",
+          "cellnull": "-32768"
+        }
+      },
+      {
+        "ne-110m-lakes": {
+          "masked": "Y",
+          "measure": "N",
+          "source": "naturalearth",
+          "product": "lakes",
+          "content": "water",
+          "layerid": "ne-110m-lakes",
+          "prefix": "ne-110m-lakes",
+          "suffix": "0",
+          "scalefac": "1",
+          "offsetadd": "0",
+          "dataunit": "boundary",
+          "celltype": "vector",
+          "cellnull": "-32768"
+        }
+      },
+      {
+        "graticules-1deg": {
+          "masked": "Y",
+          "measure": "N",
+          "source": "naturalearth",
+          "product": "graticules",
+          "content": "graticulse",
+          "layerid": "graticules-1deg",
+          "prefix": "graticules-1deg",
+          "suffix": "0",
+          "scalefac": "1",
+          "offsetadd": "0",
+          "dataunit": "none",
+          "celltype": "vector",
+          "cellnull": "-32768"
+        }
+      },
+      {
+        "graticules-5deg": {
+          "masked": "Y",
+          "measure": "N",
+          "source": "naturalearth",
+          "product": "graticules",
+          "content": "graticulse",
+          "layerid": "graticules-5deg",
+          "prefix": "graticules-5deg",
+          "suffix": "0",
+          "scalefac": "1",
+          "offsetadd": "0",
+          "dataunit": "none",
+          "celltype": "vector",
+          "cellnull": "-32768"
+        }
+      },
+      {
+        "graticules-10deg": {
+          "masked": "Y",
+          "measure": "N",
+          "source": "naturalearth",
+          "product": "graticules",
+          "content": "graticulse",
+          "layerid": "graticules-10deg",
+          "prefix": "graticules-10deg",
+          "suffix": "0",
+          "scalefac": "1",
+          "offsetadd": "0",
+          "dataunit": "none",
+          "celltype": "vector",
+          "cellnull": "-32768"
+        }
+      },
+      {
+        "graticules-15deg": {
+          "masked": "Y",
+          "measure": "N",
+          "source": "naturalearth",
+          "product": "graticules",
+          "content": "graticulse",
+          "layerid": "graticules-15deg",
+          "prefix": "graticules-15deg",
+          "suffix": "0",
+          "scalefac": "1",
+          "offsetadd": "0",
+          "dataunit": "none",
+          "celltype": "vector",
+          "cellnull": "-32768"
+        }
+      },
+      {
+        "graticules-20deg": {
+          "masked": "Y",
+          "measure": "N",
+          "source": "naturalearth",
+          "product": "graticules",
+          "content": "graticulse",
+          "layerid": "graticules-20deg",
+          "prefix": "graticules-20deg",
+          "suffix": "0",
+          "scalefac": "1",
+          "offsetadd": "0",
+          "dataunit": "none",
+          "celltype": "vector",
+          "cellnull": "-32768"
+        }
+      },
+      {
+        "graticules-30deg": {
+          "masked": "Y",
+          "measure": "N",
+          "source": "naturalearth",
+          "product": "graticules",
+          "content": "graticulse",
+          "layerid": "graticules-30deg",
+          "prefix": "graticules-30deg",
+          "suffix": "0",
+          "scalefac": "1",
+          "offsetadd": "0",
+          "dataunit": "none",
+          "celltype": "vector",
+          "cellnull": "-32768"
+        }
+      },
+      {
+        "graticules-45deg": {
+          "masked": "Y",
+          "measure": "N",
+          "source": "naturalearth",
+          "product": "graticules",
+          "content": "graticulse",
+          "layerid": "graticules-45deg",
+          "prefix": "graticules-45deg",
+          "suffix": "0",
+          "scalefac": "1",
+          "offsetadd": "0",
+          "dataunit": "none",
+          "celltype": "vector",
+          "cellnull": "-32768"
+        }
+      },
+      {
+        "graticules-90deg": {
+          "masked": "Y",
+          "measure": "N",
+          "source": "naturalearth",
+          "product": "graticules",
+          "content": "graticulse",
+          "layerid": "graticules-90deg",
+          "prefix": "graticules-90deg",
+          "suffix": "0",
+          "scalefac": "1",
+          "offsetadd": "0",
+          "dataunit": "none",
+          "celltype": "vector",
+          "cellnull": "-32768"
+        }
+      }
+    ]
+  }
+}

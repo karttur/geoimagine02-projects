@@ -1,0 +1,214 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "ancillary"
+  },
+  "process": [
+    {
+      "processid": "organizeancillary",
+      "parameters": {
+        "importdef": "climateindex",
+        "epsg": "4326",
+        "instid": "NOAA",
+        "dsname": "climateindex",
+        "dsversion": "1.0",
+        "accessdate": "20210103",
+        "copyright": "",
+        "regionid": "global",
+        "regioncat": "global",
+        "dataurl": "https://www.esrl.noaa.gov/psd/data/climateindices/list/",
+        "metaurl": "https://www.esrl.noaa.gov/psd/data/climateindices/list/",
+        "title": "NOAA climate indexes",
+        "label": "NOAA climate indexes"
+      },
+      "srcpath": {
+        "volume": "Karttur3tb",
+        "hdrfiletype": "csv"
+      },
+      "dstpath": {
+        "volume": "Karttur3tb",
+        "hdrfiletype": "csv"
+      },
+      "srcraw": [
+        {
+          "best": {
+            "datadir": "climateindex",
+            "datafile": "best",
+            "theme": "climateindex",
+            "subtheme": "ENSO",
+            "cellnull": -9.99,
+            "title": "Bivariate ENSO Timeseries",
+            "label": "Bivariate El Nino Southern Oscillaltion Timeseries (Climate index)"
+          },
+          "pna": {
+            "datadir": "climateindex",
+            "datafile": "pna",
+            "theme": "climateindex",
+            "subtheme": "teleconnections",
+            "cellnull": -99.9,
+            "title": "Pacific North American (PNA) Index",
+            "label": "Pacific North American (PNA) Index (Teleconnetion climate index)"
+          },
+          "nao": {
+            "datadir": "climateindex",
+            "datafile": "nao",
+            "theme": "climateindex",
+            "subtheme": "teleconnections",
+            "cellnull": -99.9,
+            "title": "North Atlantic Oscillation (NAO) Index",
+            "label": "North Atlantic Oscillation (NAO) (Teleconnetion climate index) from CPC)"
+          },
+          "pdo": {
+            "datadir": "climateindex",
+            "datafile": "pdo",
+            "theme": "climateindex",
+            "subtheme": "teleconnections",
+            "cellnull": -9.9,
+            "title": "Pacific Decadal (PDO) Oscillation",
+            "label": "Pacific Decadal Oscillation (PDO) (Teleconnetion climate index)"
+          },
+          "nina3": {
+            "datadir": "climateindex",
+            "datafile": "nina3",
+            "theme": "climateindex",
+            "subtheme": "ENSO",
+            "cellnull": -99.9,
+            "title": "East Central Tropical Pacific SST",
+            "label": "East Central Tropical Pacific SST (ENSO + Pacific Sea Surfrance Temperature climate index) using ersstv5 from CPC"
+          },
+          "soi": {
+            "datadir": "climateindex",
+            "datafile": "soi",
+            "theme": "climateindex",
+            "subtheme": "atmosphere",
+            "cellnull": -99.99,
+            "title": "Southern Oscillation Index (SOI)",
+            "label": "Southern Oscillation Index (SOI) (Atmosphere Climate Index)"
+          },
+          "solar": {
+            "datadir": "climateindex",
+            "datafile": "solar",
+            "theme": "climateindex",
+            "subtheme": "solar",
+            "cellnull": -999,
+            "title": "Solar Flux Index",
+            "label": "Southern Oscillation Index (Atmosphere Climate Index)"
+          }
+        }
+      ],
+      "dstcomp": [
+        {
+          "best": {
+            "source": "NOAA",
+            "product": "climateindex",
+            "folder": "climateindex",
+            "band": "best",
+            "prefix": "best",
+            "suffix": "",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "index",
+            "celltype": "text",
+            "cellnull": -999,
+            "measure": "I",
+            "masked": "N"
+          },
+          "pna": {
+            "source": "NOAA",
+            "product": "climateindex",
+            "folder": "climateindex",
+            "band": "pna",
+            "prefix": "pna",
+            "suffix": "",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "index",
+            "celltype": "text",
+            "cellnull": -999,
+            "measure": "I",
+            "masked": "N"
+          },
+          "nao": {
+            "source": "NOAA",
+            "product": "climateindex",
+            "folder": "climateindex",
+            "band": "nao",
+            "prefix": "nao",
+            "suffix": "",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "index",
+            "celltype": "text",
+            "cellnull": -999,
+            "measure": "I",
+            "masked": "N"
+          },
+          "pdo": {
+            "source": "NOAA",
+            "product": "climateindex",
+            "folder": "climateindex",
+            "band": "pdo",
+            "prefix": "pdo",
+            "suffix": "",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "index",
+            "celltype": "text",
+            "cellnull": -999,
+            "measure": "I",
+            "masked": "N"
+          },
+          "nina3": {
+            "source": "NOAA",
+            "product": "climateindex",
+            "folder": "climateindex",
+            "band": "nina3",
+            "prefix": "nina3",
+            "suffix": "",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "index",
+            "celltype": "text",
+            "cellnull": -999,
+            "measure": "I",
+            "masked": "N"
+          },
+          "soi": {
+            "source": "NOAA",
+            "product": "climateindex",
+            "folder": "climateindex",
+            "band": "soi",
+            "prefix": "soi",
+            "suffix": "",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "index",
+            "celltype": "text",
+            "cellnull": -999,
+            "measure": "I",
+            "masked": "N"
+          },
+          "solar": {
+            "source": "NOAA",
+            "product": "climateindex",
+            "folder": "climateindex",
+            "band": "solar",
+            "prefix": "solar",
+            "suffix": "",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "index",
+            "celltype": "text",
+            "cellnull": -999,
+            "measure": "I",
+            "masked": "N"
+          }
+        }
+      ]
+    }
+  ]
+}

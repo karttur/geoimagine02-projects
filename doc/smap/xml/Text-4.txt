@@ -1,0 +1,56 @@
+/Library/Frameworks/GDAL.framework/Versions/2.1/Programs/gdalwarp \
+-s_srs "EPSG:4310" \
+-t_srs "EPSG:4326" \
+-tr 0.1 0.1 -te 10 -60 40 -18  \
+-r near  /Volumes/karttur3tb/smap/SPL3SMP-E.002/region/soil-moisture-avg-16D/global/2015121/soil-moisture-avg_SPL3SMP-E_global_2015121_002.tif \
+/Volumes/karttur3tb/modis/SPL3SMP-E.002/tiles/soil-moisture-avg-16D/h19/v11/2015121/testll5.tif;
+
+
+
+/Library/Frameworks/GDAL.framework/Versions/2.1/Programs/gdalwarp \
+-s_srs "EPSG:6933" \
+-t_srs "EPSG:4326" \
+-tr 0.1 0.1 -te 10 -60 40 -18  \
+-r near  /Volumes/karttur3tb/smap/SPL3SMP-E.002/region/soil-moisture-avg-16D/global/2015121/soil-moisture-avg_SPL3SMP-E_global_2015121_002.tif \
+/Volumes/karttur3tb/modis/SPL3SMP-E.002/tiles/soil-moisture-avg-16D/h19/v11/2015121/testll8.tif;
+
+
+
+/Library/Frameworks/GDAL.framework/Versions/2.1/Programs/gdalwarp \
+-s_srs "EPSG:4310" \
+-t_srs "EPSG:4326" \
+-tr 0.1 0.1 -te 10 -60 40 -18  \
+-r near  /Volumes/karttur3tb/smap/SPL3SMP-E.002/region/soil-moisture-avg-16D/global/2015121/soil-moisture-avg_SPL3SMP-E_global_2015121_002.tif \
+/Volumes/karttur3tb/modis/SPL3SMP-E.002/tiles/soil-moisture-avg-16D/h19/v11/2015121/testll6.tif;
+
+
+gdal_translate -a_ullr -17367530.45 7314540.11 17367530.45 -7314540.11 -a_srs "+proj=cea +lon_0=0 +lat_ts=30 +ellps=WGS84 +units=m" \
+-a_nodata -9999  sm-ease2.tif 
+
+
+
+gdal_translate -a_ullr -17367530.45 7314540.11 17367530.45 -7314540.11 -a_srs
+"+proj=cea +lon_0=0 +lat_ts=30 +ellps=WGS84 +units=m" -a_nodata -9999
+HDF5:"SMAP_L4_SM_aup_20170801T030000_Vv3030_001.h5"://Analysis_Data/sm_rootzone_analysis sm-rootZone_analysis.tif
+
+
+
+cs2cs +init=epsg:4326 +to +proj=cea +lon_0=0 +lat_ts=30 +ellps=WGS84 +units=m tbhbounds.txt >ease.txt
+gdal_translate -of "XYZ" HDF5:"SMAP.h5"://Soil_Moisture_Retrieval_Data/tb_h_corrected tbh.xyz
+gdal_translate -of "ENVI" -a_ullr -17367530.45 7314541.22 17367530.45 -7314541.22 -a_srs "+proj=cea +lon_0=0 +lat_ts=30 +ellps=WGS84 +units=m"  \
+-a_nodata -9999 tbh.xyz tbh3.envi
+
+/Library/Frameworks/GDAL.framework/Versions/2.1/Programs/gdal_translate \
+-a_ullr -17367530.45 7314540.11 17367530.45 -7314540.11 \
+-a_srs "+proj=cea +lon_0=0 +lat_ts=30 +ellps=WGS84 +units=m" \
+-a_nodata -9999 \
+/Volumes/karttur3tb/smap/SPL3SMP-E.002/region/soil-moisture-avg-16D/global/2015121/soil-moisture-avg_SPL3SMP-E_global_2015121_002.tif \
+/Volumes/karttur3tb/modis/SPL3SMP-E.002/tiles/soil-moisture-avg-16D/h19/v11/2015121/testll10.tif;
+
+
+/Library/Frameworks/GDAL.framework/Versions/2.1/Programs/gdalwarp \
+-t_srs "EPSG:4326" \
+-tr 0.1 0.1 -te 10 -60 40 -18  \
+-r near  \
+/Volumes/karttur3tb/modis/SPL3SMP-E.002/tiles/soil-moisture-avg-16D/h19/v11/2015121/testll10.tif \
+/Volumes/karttur3tb/modis/SPL3SMP-E.002/tiles/soil-moisture-avg-16D/h19/v11/2015121/testll11.tif;

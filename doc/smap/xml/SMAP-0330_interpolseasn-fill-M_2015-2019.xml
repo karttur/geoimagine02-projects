@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resampletssmap>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+	<period startyear = '2015' startmonth = '05' endyear = '2019' endmonth = '01' endday = '31' timestep='M'></period>
+
+	<process processid ='seasonfilltsSmap' dsversion = '1.3'>
+		<parameters></parameters>
+		<srcpath volume = "africa"></srcpath>
+		<dstpath volume = "africa"></dstpath>
+		<srccomp>
+			<soil-moisture-avg-m source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg-m" band = "soil-moisture-avg-m" prefix = "soil-moisture-avg-m" suffix = "005">	
+			</soil-moisture-avg-m>
+		</srccomp>
+	</process>
+	
+	<process processid ='seasonfilltsSmap' dsversion = '1.3'>
+		<parameters></parameters>
+		<srcpath volume = "africa"></srcpath>
+		<dstpath volume = "africa"></dstpath>
+		<srccomp>
+			<soil-moisture-avg-m source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-m" band = "soil-moisture-avg-m" prefix = "soil-moisture-avg-m" suffix = "002">	
+			</soil-moisture-avg-m>
+		</srccomp>
+	</process>
+		
+</resampletssmap>
+		

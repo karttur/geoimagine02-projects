@@ -1,0 +1,43 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "smap"
+  },
+  "period": {
+    "timestep": "static"
+  },
+  "process": {
+    "processid": "ExportToSvgAncillary",
+    "overwrite": true,
+    "parameters": {
+      "src_region": "global",
+      "scale": 0,
+      "t_epsg": 4326,
+      "stroke": "black",
+      "fill": "none",
+      "strokewidth": 0.1,
+      "strokedasharray": "2,2",
+      "pngsize": "360,180"
+    },
+    "srcpath": {
+      "volume": "africa"
+    },
+    "dstpath": {
+      "volume": "africa"
+    },
+    "srccomp": {
+      "graticules-45deg": {
+        "source": "naturalearth",
+        "product": "graticules",
+        "content": "graticules",
+        "layerid": "graticules-45deg",
+        "prefix": "graticules-45deg",
+        "suffix": "0"
+      }
+    }
+  }
+}

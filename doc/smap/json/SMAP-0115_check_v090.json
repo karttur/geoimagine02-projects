@@ -1,0 +1,49 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "system"
+  },
+  "period": {
+    "startyear": 2015,
+    "startmonth": 3,
+    "startday": 31,
+    "endyear": 2021,
+    "endmonth": 01,
+    "endday": 01,
+    "timestep": "1D"
+  },
+  "process": [
+    {
+      "processid": "CheckSMAP",
+      "overwrite": true,
+      "parameters": {
+        "product": "SPL3SMP",
+        "version": "005"
+      },
+      "srcpath": {
+        "volume": "geoinfo2021"
+      },
+      "dstpath": {
+        "volume": "geoinfo2021"
+      }
+    },
+    {
+      "processid": "CheckSMAP",
+      "dsversion": "1.3",
+      "parameters": {
+        "product": "SPL3SMP-E",
+        "version": "002"
+      },
+      "srcpath": {
+        "volume": "geoinfo2021"
+      },
+      "dstpath": {
+        "volume": "geoinfo2021"
+      }
+    }
+  ]
+}

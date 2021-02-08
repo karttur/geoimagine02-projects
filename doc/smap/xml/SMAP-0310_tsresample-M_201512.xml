@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resampletssmap>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+	<period startyear = '2015' startmonth = '11' endyear = '2015' endmonth = '12' endday = '31' timestep='D'></period>
+
+	<process processid ='resampletssmap' dsversion = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters acceptmissing = 'True' targettimestep = 'M' startstep='1' method ='avg'></parameters>
+		<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+		<srccomp>
+			<soil-moisture-avg source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005" timestep='D'>	
+			</soil-moisture-avg>
+		</srccomp>
+		<dstcomp>
+			<soil-moisture-avg-m source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg-m" band = "soil-moisture-avg-m" prefix = "soil-moisture-avg-m" suffix = "005" timestep='M'>	
+			</soil-moisture-avg-m>
+		</dstcomp>
+	</process>
+
+	
+	<processx processid ='resampletssmap' dsversion = '1.3'>
+		<overwrite>N</overwrite>
+		<parameters acceptmissing = 'True' targettimestep = 'M' startstep='1' method ='avg'></parameters>
+		<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+		<srccomp>
+			<soil-moisture-avg source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "002" timestep='D'>	
+			</soil-moisture-avg>
+		</srccomp>
+		<dstcomp>
+			<soil-moisture-avg-m source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-m" band = "soil-moisture-avg-m" prefix = "soil-moisture-avg-m" suffix = "002" timestep='M'>	
+			</soil-moisture-avg-m>
+		</dstcomp>
+	</processx>
+	
+
+</resampletssmap>
+
+		

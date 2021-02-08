@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='utf-8'?>
+<organize>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+
+	<process processid ='organizeancillary' dsversion = '3.0'>
+		<overwrite>True</overwrite>
+		<parameters importdef='climateindex'
+			epsg = '4326' 
+			instid = 'NOAA' 
+			dsname  = 'climateindex' 
+			dsversion = "1.0"
+			accessdate = "20181211"
+			copyright = ""
+			regionid = 'global' 
+			regioncat = 'global'
+			dataurl = "https://www.esrl.noaa.gov/psd/data/climateindices/list/" 
+			metaurl="https://www.esrl.noaa.gov/psd/data/climateindices/list/" 
+			title = "NOAA climate indexes"
+			label = "NOAA climate indexes"
+		> </parameters>
+		
+		<srcpath volume = "Karttur3tb" hdrfiletype = "data" ></srcpath>
+		<dstpath volume = "Karttur3tb" hdrfiletype = "data"></dstpath>
+				
+		<srcraw 
+			id="best"
+			datadir ='climateindex'
+			datafile = "best"
+			theme = "climateindex"
+			subtheme = "ENSO"
+			cellnull = '-9.99'
+			title = "Bivariate ENSO Timeseries"
+			label = "Bivariate El Nino Southern Oscillaltion Timeseries (Climate index)"
+		></srcraw>
+		<dstcomp>
+			<best source = "NOAA" product = "climateindex" folder = "climateindex" band = "best" prefix = "best" suffix = "" 
+			scalefac = "1" offsetadd = "0" dataunit = "index" celltype = 'text' cellnull = '-999' measure ='N' masked='N'>	
+			</best>
+		</dstcomp>
+		
+		<srcraw 
+			id="pna"
+			datadir ='climateindex'
+			datafile = "pna"
+			theme = "climateindex"
+			subtheme = "Teleconnections"
+			cellnull = '-99.9'
+			title = "Pacific North American Index"
+			label = "Pacific North American Index (Teleconnetion climate index)"
+		></srcraw>
+		<dstcomp>
+			<pna source = "NOAA" product = "climateindex" folder = "climateindex" band = "pna" prefix = "pna" suffix = "" 
+			scalefac = "1" offsetadd = "0" dataunit = "index" celltype = 'text' cellnull = '-999' measure ='N' masked='N'>	
+			</pna>
+		</dstcomp>
+		   	 
+		<srcraw 
+			id="nao"
+			datadir ='climateindex'
+			datafile = "nao"
+			theme = "climateindex"
+			subtheme = "Teleconnection"
+			cellnull = '-99.9'
+			title = "North Atlantic Oscillation"
+			label = "North Atlantic Oscillation (Teleconnetion climate index) from CPC"
+		></srcraw>
+		<dstcomp>
+			<nao source = "NOAA" product = "climateindex" folder = "climateindex" band = "nao" prefix = "nao" suffix = "" 
+			scalefac = "1" offsetadd = "0" dataunit = "index" celltype = 'text' cellnull = '-999' measure ='N' masked='N'>	
+			</nao>
+		</dstcomp>
+
+		<srcraw 
+			id="pdo"
+			datadir ='climateindex'
+			datafile = "pdo"
+			theme = "climateindex"
+			subtheme = "Teleconnection"
+			cellnull = '-9.9'
+			title = "Pacific Decadal Oscillation"
+			label = "Pacific Decadal Oscillation (Teleconnetion climate index)"
+		></srcraw>
+		<dstcomp>
+			<pdo source = "NOAA" product = "climateindex" folder = "climateindex" band = "pdo" prefix = "pdo" suffix = "" 
+			scalefac = "1" offsetadd = "0" dataunit = "index" celltype = 'text' cellnull = '-999' measure ='N' masked='N'>	
+			</pdo>
+		</dstcomp>
+		
+		<srcraw 
+			id="nina3"
+			datadir ='climateindex'
+			datafile = "nina3"
+			theme = "climateindex"
+			subtheme = "ENSO"
+			cellnull = '-99.9'
+			title = "East Central Tropical Pacific SST"
+			label = "East Central Tropical Pacific SST (ENSO + Pacific Sea Surfrance Temperature climate index) using ersstv5 from CPC"
+		></srcraw>
+		<dstcomp>
+			<nina3 source = "NOAA" product = "climateindex" folder = "climateindex" band = "nina3" prefix = "nina3" suffix = "" 
+			scalefac = "1" offsetadd = "0" dataunit = "index" celltype = 'text' cellnull = '-999' measure ='N' masked='N'>	
+			</nina3>
+		</dstcomp>
+		
+		<srcraw 
+			id="soi"
+			datadir ='climateindex'
+			datafile = "soi"
+			theme = "climateindex"
+			subtheme = "Atmosphere"
+			cellnull = '-99.99'
+			title = "Southern Oscillation Index"
+			label = "Southern Oscillation Index (Atmosphere Climate Index)"
+		></srcraw>
+		<dstcomp>
+			<soi source = "NOAA" product = "climateindex" folder = "climateindex" band = "soi" prefix = "soi" suffix = "" 
+			scalefac = "1" offsetadd = "0" dataunit = "index" celltype = 'text' cellnull = '-999' measure ='N' masked='N'>	
+			</soi>
+		</dstcomp>
+		
+		<srcraw 
+			id="solar"
+			datadir ='climateindex'
+			datafile = "solar"
+			theme = "climateindex"
+			subtheme = "Solar"
+			cellnull = '-999'
+			title = "Solar Flux Index"
+			label = "Southern Oscillation Index (Atmosphere Climate Index)"
+		></srcraw>
+		<dstcomp>
+			<solar source = "NOAA" product = "climateindex" folder = "climateindex" band = "solar" prefix = "solar" suffix = "" 
+			scalefac = "1" offsetadd = "0" dataunit = "index" celltype = 'text' cellnull = '-999' measure ='N' masked='N'>	
+			</solar>
+		</dstcomp>
+
+	</process>
+	
+</organize>

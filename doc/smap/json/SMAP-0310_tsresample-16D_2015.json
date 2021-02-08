@@ -1,0 +1,257 @@
+{
+  "ResampleTSSmap": {
+    "userproj": {
+      "userid": "karttur",
+      "projectid": "karttur",
+      "tractid": "karttur",
+      "siteid": "*",
+      "plotid": "*",
+      "system": "smap"
+    },
+    "period": {
+      "startyear": 2015,
+      "startmonth": 4,
+      "startday": 22,
+      "endyear": 2016,
+      "endmonth": 1,
+      "endday": 10,
+      "timestep": "D"
+    },
+    "processx": [
+      {
+        "processid": "ResampleTSSmap",
+        "overwrite": false,
+        "acceptmissing": true,
+        "parameters": {
+          "targettimestep": "16D",
+          "startstep": "1",
+          "method": "avg"
+        },
+        "srcpath": {
+          "volume": "africa",
+          "hdr": "tif"
+        },
+        "dstpath": {
+          "volume": "africa",
+          "hdr": "tif"
+        },
+        "srccomp": {
+          "soil-moisture-avg": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-avg",
+            "layerid": "soil-moisture-avg",
+            "prefix": "soil-moisture-avg",
+            "suffix": "005"
+          }
+        },
+        "dstcomp": {
+          "soil-moisture-avg-16d": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-avg-16d",
+            "layerid": "soil-moisture-avg-16d",
+            "prefix": "soil-moisture-avg-16d",
+            "suffix": "005"
+          }
+        }
+      },
+      {
+        "processid": "ResampleTSSmap",
+        "overwrite": false,
+        "acceptmissing": true,
+        "parameters": {
+          "targettimestep": "16D",
+          "startstep": "1",
+          "method": "avg"
+        },
+        "srcpath": {
+          "volume": "africa",
+          "hdr": "tif"
+        },
+        "dstpath": {
+          "volume": "africa",
+          "hdr": "tif"
+        },
+        "srccomp": {
+          "soil-moisture-avg": {
+            "source": "SPL3SMP-E.002",
+            "product": "SPL3SMP-E",
+            "content": "soil-moisture-avg",
+            "layerid": "soil-moisture-avg",
+            "prefix": "soil-moisture-avg",
+            "suffix": "002"
+          }
+        },
+        "dstcomp": {
+          "soil-moisture-avg-16d": {
+            "source": "SPL3SMP-E.002",
+            "product": "SPL3SMP-E",
+            "content": "soil-moisture-avg-16d",
+            "layerid": "soil-moisture-avg-16d",
+            "prefix": "soil-moisture-avg-16d",
+            "suffix": "002"
+          }
+        }
+      },
+      {
+        "processid": "ResampleTSSmap",
+        "overwrite": "True",
+        "acceptmissing": true,
+        "parameters": {
+          "targettimestep": "16D",
+          "startstep": "1",
+          "method": "avg"
+        },
+        "srcpath": {
+          "volume": "Pegasus6",
+          "hdr": "tif"
+        },
+        "dstpath": {
+          "volume": "Pegasus6",
+          "hdr": "tif"
+        },
+        "srccomp": {
+          "freeze-thaw-fraction-avg": {
+            "source": "SPL3SMP-E.002",
+            "product": "SPL3SMP-E",
+            "content": "freeze-thaw-avg",
+            "layerid": "freeze-thaw-fraction-avg",
+            "prefix": "freeze-thaw-frac-avg",
+            "suffix": "002"
+          }
+        },
+        "dstcomp": {
+          "freeze-thaw-fraction-avg-16d": {
+            "source": "SPL3SMP-E.002",
+            "product": "SPL3SMP-E",
+            "content": "freeze-thaw-avg-16d",
+            "layerid": "freeze-thaw-fraction-avg-16d",
+            "prefix": "freeze-thaw-frac-avg-16d",
+            "suffix": "002"
+          }
+        }
+      },
+      {
+        "processid": "ResampleTSSmap",
+        "overwrite": false,
+        "acceptmissing": true,
+        "parameters": {
+          "targettimestep": "16D",
+          "startstep": "1",
+          "method": "avg"
+        },
+        "srcpath": {
+          "volume": "Pegasus6",
+          "hdr": "tif"
+        },
+        "dstpath": {
+          "volume": "Pegasus6",
+          "hdr": "tif"
+        },
+        "srccomp": {
+          "veg-water-avg": {
+            "id": "layersum",
+            "source": "SPL3SMP-E.002",
+            "product": "SPL3SMP-E",
+            "content": "veg-water-avg",
+            "layerid": "veg-water-avg",
+            "prefix": "veg-water-avg",
+            "suffix": "002"
+          }
+        },
+        "dstcomp": {
+          "veg-water-avg-16d": {
+            "id": "layersum",
+            "source": "SPL3SMP-E.002",
+            "product": "SPL3SMP-E",
+            "content": "veg-water-avg-16d",
+            "layerid": "veg-water-avg-16d",
+            "prefix": "veg-water-avg-16d",
+            "suffix": "002"
+          }
+        }
+      },
+      {
+        "processid": "ResampleTSSmap",
+        "overwrite": false,
+        "acceptmissing": true,
+        "parameters": {
+          "targettimestep": "16D",
+          "startstep": "1",
+          "method": "avg"
+        },
+        "srcpath": {
+          "volume": "Pegasus6",
+          "hdr": "tif"
+        },
+        "dstpath": {
+          "volume": "Pegasus6",
+          "hdr": "tif"
+        },
+        "srccomp": {
+          "radar-water-body-fraction-avg": {
+            "id": "layersum",
+            "source": "SPL3SMP-E.002",
+            "product": "SPL3SMP-E",
+            "content": "water-body-fraction-avg",
+            "layerid": "radar-water-body-fraction-avg",
+            "prefix": "radar-water-body-fraction-avg",
+            "suffix": "002"
+          }
+        },
+        "dstcomp": {
+          "radar-water-body-frac-avg-16d": {
+            "id": "layersum",
+            "source": "SPL3SMP-E.002",
+            "product": "SPL3SMP-E",
+            "content": "water-body-frac-avg-16d",
+            "layerid": "radar-water-body-frac-avg-16d",
+            "prefix": "radar-water-body-fract-avg-16d",
+            "suffix": "002"
+          }
+        }
+      }
+    ],
+    "process": {
+      "processid": "ResampleTSSmap",
+      "overwrite": false,
+      "acceptmissing": true,
+      "parameters": {
+        "targettimestep": "16D",
+        "startstep": "1",
+        "method": "avg"
+      },
+      "srcpath": {
+        "volume": "Pegasus6",
+        "hdr": "tif"
+      },
+      "dstpath": {
+        "volume": "Pegasus6",
+        "hdr": "tif"
+      },
+      "srccomp": {
+        "static-water-body-fraction-avg": {
+          "id": "layersum",
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "water-body-fraction-avg",
+          "layerid": "static-water-body-fraction-avg",
+          "prefix": "static-water-body-fraction-avg",
+          "suffix": "002"
+        }
+      },
+      "dstcomp": {
+        "static-water-body-frac-avg-16d": {
+          "id": "layersum",
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "content": "water-body-frac-avg-16d",
+          "layerid": "static-water-body-frac-avg-16d",
+          "prefix": "static-water-body-frac-avg-16d",
+          "suffix": "002"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<smapoverlay>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+	<period startyear = '2015' startmonth = '04' startday = '23' endyear = '2019' endmonth = '02' endday = '19' timestep='16D'></period>
+	
+		
+	<process processid ='fractionadjustsmapoverlay' dsversion = '1.3'>
+		<acceptmissing>True</acceptmissing>
+		<overwrite>False</overwrite>
+		<parameters method ='collectoutsidefrac' nullaszero='True' dstmax='0.5' dstweight='1' template = 'water-body-frac-avg-16d'></parameters>
+		<srcpath volume = "Pegasus6" hdrfiletype='tif'></srcpath>
+		<dstpath volume = "Pegasus6" hdrfiletype='tif'></dstpath>
+		<srccomp>
+			
+			<soil-moisture-avg-16d id='layer1' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002">	
+			</soil-moisture-avg-16d>
+			
+			<water-body-frac-avg-16d  id='fraction' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "water-body-frac-avg-16d" band = "water-body-frac-avg-16d" prefix = "water-body-frac-avg-16d" suffix = "002">	
+			</water-body-frac-avg-16d>
+			
+		</srccomp>
+		<dstcomp>
+			<soil-moisture-avg-16d  id='layer' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002-wboadj">	
+			</soil-moisture-avg-16d>
+		</dstcomp>
+	</process>
+
+	<process processid ='fractionadjustsmapoverlay' dsversion = '1.3'>
+		<acceptmissing>True</acceptmissing>
+		<overwrite>True</overwrite>
+		<parameters method ='collectoutsidefrac' nullaszero='True' dstmax='1.0' dstweight='1' template = 'freeze-thaw-fraction-avg-16d'></parameters>
+		<srcpath volume = "Pegasus6" hdrfiletype='tif'></srcpath>
+		<dstpath volume = "Pegasus6" hdrfiletype='tif'></dstpath>
+		<srccomp>
+			
+			<water-body-frac-avg-16d  id='fraction' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "water-body-frac-avg-16d" band = "water-body-frac-avg-16d" prefix = "water-body-frac-avg-16d" suffix = "002">	
+			</water-body-frac-avg-16d>
+			
+			<freeze-thaw-fraction-avg-16d id='layer1' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "freeze-thaw-avg-16d" band = "freeze-thaw-fraction-avg-16d" prefix = "freeze-thaw-frac-avg-16d" suffix = "002">	
+			</freeze-thaw-fraction-avg-16d>
+			
+		</srccomp>
+		<dstcomp>
+			<freeze-thaw-fraction-avg-16d id='layer' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "freeze-thaw-avg-16d" band = "freeze-thaw-fraction-avg-16d" prefix = "freeze-thaw-frac-avg-16d" suffix = "002-wboadj">	
+			</freeze-thaw-fraction-avg-16d>
+		</dstcomp>
+	</process>
+
+</smapoverlay>
+
+		

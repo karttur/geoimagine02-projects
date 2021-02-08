@@ -1,0 +1,78 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "smap"
+  },
+  "period": {
+    "startyear": "2015",
+    "startmonth": "4",
+    "startday": "23",
+    "endyear": "2017",
+    "endmonth": "12",
+    "endday": "31",
+    "timestep": "16D"
+  },
+  "process": {
+    "processid": "ExportToByteSmap",
+    "overwrite": true,
+    "parameters": {
+      "palette": "smap"
+    },
+    "srcpath": {
+      "volume": "africa",
+      "hdr": "tif",
+      "dat": "tif"
+    },
+    "dstpath": {
+      "volume": "africa",
+      "hdr": "tif",
+      "dat": "tif"
+    },
+    "srccomp": {
+      "soil-moisture-am": {
+        "source": "SPL3SMP.005",
+        "product": "SPL3SMP",
+        "folder": "soil-moisture-am-16D",
+        "band": "soil-moisture-am",
+        "prefix": "soil-moisture-am",
+        "suffix": "005"
+      },
+      "soil-moisture-pm": {
+        "source": "SPL3SMP.005",
+        "product": "SPL3SMP",
+        "folder": "soil-moisture-pm-16D",
+        "band": "soil-moisture-pm",
+        "prefix": "soil-moisture-pm",
+        "suffix": "005"
+      },
+      "soil-moisture-avg": {
+        "source": "SPL3SMP.005",
+        "product": "SPL3SMP",
+        "folder": "soil-moisture-avg-16D",
+        "band": "soil-moisture-avg",
+        "prefix": "soil-moisture-avg",
+        "suffix": "005"
+      },
+      "soil-moisture-min": {
+        "source": "SPL3SMP.005",
+        "product": "SPL3SMP",
+        "folder": "soil-moisture-min-16D",
+        "band": "soil-moisture-min",
+        "prefix": "soil-moisture-min",
+        "suffix": "005"
+      },
+      "soil-moisture-max": {
+        "source": "SPL3SMP.005",
+        "product": "SPL3SMP",
+        "folder": "soil-moisture-max-16D",
+        "band": "soil-moisture-max",
+        "prefix": "soil-moisture-max",
+        "suffix": "005"
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<updatedb>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+	<period startyear = '2015' startmonth = '04' startday = '23' endyear = '2019' endmonth = '02' endday = '19' timestep='16D'></period>
+		
+	<process processid ='updatedbSmap' dsversion = '1.3'>
+		<parameters></parameters>
+		<dstpath volume = "Pegasus6" hdrfiletype='tif'></dstpath>
+		<dstcomp>
+			<water-body-frac-avg-16d  source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "water-body-frac-avg-16d" band = "water-body-frac-avg-16d" prefix = "water-body-frac-avg-16d" suffix = "002"	
+				celltype = "Float32" scalefac ='1' offsetadd='0' dataunit ='index' measure='R' cellnull='-9999'>	
+			</water-body-frac-avg-16d>
+		</dstcomp>
+	</process>
+	
+	<process processid ='updatedbSmap' dsversion = '1.3'>
+		<parameters></parameters>
+		<dstpath volume = "Pegasus6" hdrfiletype='tif'></dstpath>
+		<dstcomp>
+			<soil-moisture-avg-16d id='layer' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002"	
+				celltype = "Float32" scalefac ='1' offsetadd='0' dataunit ='cm**3/cm**3' measure='R' cellnull='-9999'>
+			</soil-moisture-avg-16d>
+		</dstcomp>
+	</process>
+
+	<process processid ='updatedbSmap' dsversion = '1.3'>
+		<parameters></parameters>
+		<dstpath volume = "Pegasus6" hdrfiletype='tif'></dstpath>
+		<dstcomp>	
+			<freeze-thaw-fraction-avg-16d id='layer2' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "freeze-thaw-avg-16d" band = "freeze-thaw-fraction-avg-16d" prefix = "freeze-thaw-frac-avg-16d" suffix = "002"	
+				celltype = "Float32" scalefac ='1' offsetadd='0' dataunit ='index' measure='R' cellnull='-9999'>
+			</freeze-thaw-fraction-avg-16d>
+		</dstcomp>
+	</process>
+	
+	<process processid ='updatedbSmap' dsversion = '1.3'>
+		<parameters></parameters>
+		<dstpath volume = "Pegasus6" hdrfiletype='tif'></dstpath>
+		<dstcomp>	
+			<veg-water-avg-16d id='layer3' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "veg-water-avg-16d" band = "veg-water-avg-16d" prefix = "veg-water-avg-16d" suffix = "002"	
+				celltype = "Float32" scalefac ='1' offsetadd='0' dataunit ='kg/m**2' measure='R' cellnull='-9999'>
+			</veg-water-avg-16d>
+		</dstcomp>
+	</process>
+
+</updatedb>
+
+
+			
+
+			
+			
+						
+			
+	
+	

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<runprocess>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+	<periodx startyear = '2015' startmonth = '05' endyear = '2018' endmonth = '04' endday = '30' timestep='M'></periodx>
+	<period startyear = '2015' startmonth = '05'  endyear = '2019' endmonth = '01' timestep='M'></period>
+	
+	<process processid ='extractseasonsmap' dsversion = '1.3'>
+		<overwrite>False</overwrite>
+		<parameters></parameters>
+		<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+		<srccomp>
+			<soil-moisture-avg-m source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg-m" band = "soil-moisture-avg-m" prefix = "soil-moisture-avg-m" suffix = "005">	
+			</soil-moisture-avg-m>
+		</srccomp>
+	</process>
+	
+	<process processid ='extractseasonsmap' dsversion = '1.3'>
+		<overwrite>False</overwrite>
+		<parameters></parameters>
+		<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+		<srccomp>
+			<soil-moisture-avg-m source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-m" band = "soil-moisture-avg-m" prefix = "soil-moisture-avg-m" suffix = "002">	
+			</soil-moisture-avg-m>
+		</srccomp>
+	</process>
+	
+</runprocess>

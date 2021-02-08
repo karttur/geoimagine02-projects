@@ -1,0 +1,33 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "smap"
+  },
+  "period": {
+    "startyear": 2015,
+    "startmonth": 3,
+    "startday": 31,
+    "endyear": 2021,
+    "endmonth": 1,
+    "endday": 1,
+    "timestep": "1D"
+  },
+  "process": [
+    {
+      "processid": "SearchSmapProducts",
+      "parameters": {
+        "remoteuser": "Gumbricht",
+        "product": "SPL3SMP-E",
+        "version": "004",
+        "serverurl": "https://n5eil01u.ecs.nsidc.org/"
+      },
+      "dstpath": {
+        "volume": "geoinfo2021"
+      }
+    }
+  ]
+}

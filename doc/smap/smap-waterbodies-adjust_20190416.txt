@@ -1,0 +1,47 @@
+###################################
+###################################
+###             SMAP            ###
+###################################
+###################################
+
+## To run this process chain you must have completed the SMAP initial processing ##
+
+###################################
+###          Update db          ###
+###################################
+
+## If you have access to SMAP data created by karttur's Geoimagine Framework ##
+## you can access the data from your Framework installation by updating the db ##
+## You can also use updatedb to clean your database and/or delete files from your Framework organized storage ##
+
+## Update the db with the input data required for the water body adjustment ##
+#SMAP-0190_udatedb_16D_20150423-present.xml
+
+###################################
+###   Adjust for water bodies   ###
+###################################
+
+## Adjust SMAP estimates for open water bodies ##
+#SMAP-0240_overlayWaterBody_20150331-#20181231_16D.xml
+
+###################################
+###       Extract season        ###
+###################################
+
+## Extract seasonal signal ##
+#SMAP-0320_extract-season_soil-moisture-wboadj_16D.xml
+
+###################################
+###  Interpolate with seasons   ###
+###################################
+
+## Interpolate nodata supported with seasonal signal ##
+SMAP-0330_interpolseasn-season_soil-moisture-wboadj_16D_2015-2019.xml
+
+###################################
+###   Extract season (again)    ###
+###################################
+
+## Extract seasonal signal for filled and interpolated soil moisture ##
+## This is the signal that is used for assimilation of MODIS TWI ##
+#SMAP-0320_extract-season_soil-moisture-fill-wboadj_16D.xml

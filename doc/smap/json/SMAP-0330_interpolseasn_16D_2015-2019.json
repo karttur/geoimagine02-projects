@@ -1,0 +1,103 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "smap"
+  },
+  "period": {
+    "startyear": 2015,
+    "startmonth": 4,
+    "startday": 23,
+    "endyear": 2019,
+    "endmonth": 2,
+    "endday": 19,
+    "timestep": "16D"
+  },
+  "processx": [
+    {
+      "processid": "SeasonFillTSSmap",
+      "overwrite": false,
+      "parameters": null,
+      "srcpath": {
+        "volume": "africa"
+      },
+      "dstpath": {
+        "volume": "africa"
+      },
+      "srccomp": {
+        "soil-moisture-avg-16d": {
+          "source": "SPL3SMP.005",
+          "product": "SPL3SMP",
+          "folder": "soil-moisture-avg-16d",
+          "band": "soil-moisture-avg-16d",
+          "prefix": "soil-moisture-avg-16d",
+          "suffix": "005"
+        }
+      }
+    },
+    {
+      "processid": "SeasonFillTSSmap",
+      "parameters": null,
+      "srcpath": {
+        "volume": "africa"
+      },
+      "dstpath": {
+        "volume": "africa"
+      },
+      "srccomp": {
+        "soil-moisture-avg-16d": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "folder": "soil-moisture-avg-16d",
+          "band": "soil-moisture-avg-16d",
+          "prefix": "soil-moisture-avg-16d",
+          "suffix": "002"
+        }
+      }
+    },
+    {
+      "processid": "SeasonFillTSSmap",
+      "parameters": null,
+      "srcpath": {
+        "volume": "Pegasus6"
+      },
+      "dstpath": {
+        "volume": "Pegasus6"
+      },
+      "srccomp": {
+        "soil-moisture-avg-16d": {
+          "source": "SPL3SMP-E.002",
+          "product": "SPL3SMP-E",
+          "folder": "soil-moisture-avg-16d",
+          "band": "soil-moisture-avg-16d",
+          "prefix": "soil-moisture-avg-16d",
+          "suffix": "002-wboadj"
+        }
+      }
+    }
+  ],
+  "process": {
+    "processid": "SeasonFillTSSmap",
+    "parameters": null,
+    "srcpath": {
+      "volume": "Pegasus6"
+    },
+    "dstpath": {
+      "volume": "Pegasus6"
+    },
+    "srccomp": {
+      "veg-water-avg-16d": {
+        "id": "layersum",
+        "source": "SPL3SMP-E.002",
+        "product": "SPL3SMP-E",
+        "folder": "veg-water-avg-16d",
+        "band": "veg-water-avg-16d",
+        "prefix": "veg-water-avg-16d",
+        "suffix": "002"
+      }
+    }
+  }
+}

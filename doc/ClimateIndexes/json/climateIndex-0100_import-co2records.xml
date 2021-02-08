@@ -1,0 +1,56 @@
+<organize>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+
+	<process processid ='organizeancillary' dsversion = '3.0'>
+		<overwrite>True</overwrite>
+		<parameters importdef='co2record'
+			epsg = '4326' 
+			instid = 'NOAA' 
+			dsname  = 'climateindex' 
+			dsversion = "1.0"
+			accessdate = "20181211"
+			copyright = ""
+			regionid = 'global' 
+			regioncat = 'global'
+			dataurl = "https://datahub.io/core/co2-ppm" 
+			metaurl="https://datahub.io/core/co2-ppm" 
+			title = "NOAA climate indexes"
+			label = "NOAA climate indexes"
+		> </parameters>
+		
+		<srcpath volume = "Karttur3tb" hdrfiletype = "csv" ></srcpath>
+		<dstpath volume = "Karttur3tb" hdrfiletype = "csv"></dstpath>
+				
+		<srcraw 
+			id="co2-mm-gl"
+			datadir ='climateindex'
+			datafile = "co2-mm-gl"
+			theme = "climateindex"
+			subtheme = "co2"
+			cellnull = '-9.99'
+			title = "Global monthly CO2"
+			label = "Global monthly CO2"
+		></srcraw>
+		<dstcomp>
+			<co2-mm-gl source = "NOAA" product = "climateindex" folder = "climateindex" band = "co2-mm-gl" prefix = "co2-mm-gl" suffix = "" 
+			scalefac = "1" offsetadd = "0" dataunit = "ppm" celltype = 'text' cellnull = '-999' measure ='R' masked='N'>	
+			</co2-mm-gl>
+		</dstcomp>
+		
+		<srcraw 
+			id="co2-mm-mlo"
+			datadir ='climateindex'
+			datafile = "co2-mm-mlo"
+			theme = "climateindex"
+			subtheme = "co2"
+			cellnull = '-9.99'
+			title = "Mauna Loa monthly CO2"
+			label = "Mauna Loa monthly CO2"
+		></srcraw>
+		<dstcomp>
+			<co2-mm-mlo source = "NOAA" product = "climateindex" folder = "climateindex" band = "co2-mm-mlo" prefix = "co2-mm-mlo" suffix = "" 
+			scalefac = "1" offsetadd = "0" dataunit = "ppm" celltype = 'text' cellnull = '-999' measure ='R' masked='N'>	
+			</co2-mm-mlo>
+		</dstcomp>
+	</process>
+</organize>

@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='utf-8'?>
+<organize>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' system = 'ancillary'></userproj>
+	<period timestep='static'></period>
+
+	<process processid ='organizeancillary'>
+		<parameters importdef='shp'
+			epsg = '4326'
+			instid = 'naturalearth'
+			dsname = '110m'
+			source = 'naturalearth'
+			dsversion = "1.0"
+			accessdate = "20190420"
+			regionid = 'global'
+			regioncat = 'global'
+			datadir ='110m_physical'
+			datafile=''
+			metapath =""
+			dataurl = ""
+			metaurl=""
+			title = "1:110m Physical Vectors"
+			label = "1:110m Physical Vectors"
+			replacestr = ''
+			replacetag = ''
+		> </parameters>
+
+		<srcpath volume = "africa" hdrfiletype = "shp" datfiletype = ""></srcpath>
+		<dstpath volume = 'africa' hdrfiletype = "shp" datfiletype = ""></dstpath>
+
+		<srcraw id='ne-110m-land'
+			datadir ='ANCILIMPORT/NaturalEarth/110m_physical'
+			datafile = "ne_110m_land"
+			datalayer = "land"
+			measure = "N"
+			dsversion = "2014"
+			accessdate = "20190420"
+			product = 'ne-physical'
+			theme = "land"
+			subtheme = "land"
+			copyright = ""
+			dataurl = ""
+			metapath =""
+			metaurl=""
+			title = "Global land mask"
+			label = "Land polygons including major islands, 1:110m."
+		></srcraw>
+		<dstcomp>
+			<ne-110m-land masked='Y'  measure = "N" source = "naturalearth" product = "land"
+			     folder = 'land' band = "ne-110m-land" prefix = "ne-110m-land" suffix = "0"
+			     scalefac = "1" offsetadd = "0" dataunit = "boundary" celltype = 'vector' cellnull = '-32768'>
+			</ne-110m-land>
+		</dstcomp>
+
+		<srcraw id='ne-110m-lakes'
+			datadir ='ANCILIMPORT/NaturalEarth/110m_physical'
+			datafile = "ne_110m_lakes"
+			datalayer = "water"
+			measure = "N"
+			dsversion = "2014"
+			accessdate = "20190420"
+			product = 'ne-physical'
+			theme = "lakes"
+			subtheme = "lakes"
+			copyright = ""
+			dataurl = ""
+			metapath =""
+			metaurl=""
+			title = "Global lake mask"
+			label = "Natural and artificial lakes. 1:110m."
+		></srcraw>
+		<dstcomp>
+			<ne-110m-lakes masked='Y'  measure = "N" source = "naturalearth" product = "lakes"
+			     folder = 'water' band = "ne-110m-lakes" prefix = "ne-110m-lakes" suffix = "0"
+			     scalefac = "1" offsetadd = "0" dataunit = "boundary" celltype = 'vector' cellnull = '-32768'>
+			</ne-110m-lakes>
+		</dstcomp>
+		
+		<srcraw id='graticules-1deg'
+			datadir ='ANCILIMPORT/NaturalEarth/110m_physical'
+			datafile = "ne_110m_graticules_1"
+			datalayer = "graticule"
+			measure = "N"
+			dsversion = "2014"
+			accessdate = "20190420"
+			product = 'ne-graticule'
+			theme = "graticule"
+			subtheme = "lonlat"
+			copyright = ""
+			dataurl = ""
+			metapath =""
+			metaurl=""
+			title = "Graticule longitue latitude"
+			label = "Graticule longitue latitude at 1 degree"
+		></srcraw>
+		<dstcomp>
+			<graticules-1deg masked='Y'  measure = "N" source = "naturalearth" product = "graticules"
+			     folder = 'graticulse' band = "graticules-1deg" prefix = "graticules-1deg" suffix = "0"
+			     scalefac = "1" offsetadd = "0" dataunit = "none" celltype = 'vector' cellnull = '-32768'>
+			</graticules-1deg>
+		</dstcomp>
+		
+		<srcraw id='graticules-5deg'
+			datadir ='ANCILIMPORT/NaturalEarth/110m_physical'
+			datafile = "ne_110m_graticules_5"
+			datalayer = "graticule"
+			measure = "N"
+			dsversion = "2014"
+			accessdate = "20190420"
+			product = 'ne-graticule'
+			theme = "graticule"
+			subtheme = "lonlat"
+			copyright = ""
+			dataurl = ""
+			metapath =""
+			metaurl=""
+			title = "Graticule longitue latitude"
+			label = "Graticule longitue latitude at 1 degree"
+		></srcraw>
+		<dstcomp>
+			<graticules-5deg masked='Y'  measure = "N" source = "naturalearth" product = "graticules"
+			     folder = 'graticulse' band = "graticules-5deg" prefix = "graticules-5deg" suffix = "0"
+			     scalefac = "1" offsetadd = "0" dataunit = "none" celltype = 'vector' cellnull = '-32768'>
+			</graticules-5deg>
+		</dstcomp>
+		
+		<srcraw id='graticules-10deg'
+			datadir ='ANCILIMPORT/NaturalEarth/110m_physical'
+			datafile = "ne_110m_graticules_10"
+			datalayer = "graticule"
+			measure = "N"
+			dsversion = "2014"
+			accessdate = "20190420"
+			product = 'ne-graticule'
+			theme = "graticule"
+			subtheme = "lonlat"
+			copyright = ""
+			dataurl = ""
+			metapath =""
+			metaurl=""
+			title = "Graticule longitue latitude"
+			label = "Graticule longitue latitude at 1 degree"
+		></srcraw>
+		<dstcomp>
+			<graticules-10deg masked='Y'  measure = "N" source = "naturalearth" product = "graticules"
+			     folder = 'graticulse' band = "graticules-10deg" prefix = "graticules-10deg" suffix = "0"
+			     scalefac = "1" offsetadd = "0" dataunit = "none" celltype = 'vector' cellnull = '-32768'>
+			</graticules-10deg>
+		</dstcomp>
+		
+		<srcraw id='graticules-15deg'
+			datadir ='ANCILIMPORT/NaturalEarth/110m_physical'
+			datafile = "ne_110m_graticules_15"
+			datalayer = "graticule"
+			measure = "N"
+			dsversion = "2014"
+			accessdate = "20190420"
+			product = 'ne-graticule'
+			theme = "graticule"
+			subtheme = "lonlat"
+			copyright = ""
+			dataurl = ""
+			metapath =""
+			metaurl=""
+			title = "Graticule longitue latitude"
+			label = "Graticule longitue latitude at 1 degree"
+		></srcraw>
+		<dstcomp>
+			<graticules-15deg masked='Y'  measure = "N" source = "naturalearth" product = "graticules"
+			     folder = 'graticulse' band = "graticules-15deg" prefix = "graticules-15deg" suffix = "0"
+			     scalefac = "1" offsetadd = "0" dataunit = "none" celltype = 'vector' cellnull = '-32768'>
+			</graticules-15deg>
+		</dstcomp>
+		
+		<srcraw id='graticules-20deg'
+			datadir ='ANCILIMPORT/NaturalEarth/110m_physical'
+			datafile = "ne_110m_graticules_20"
+			datalayer = "graticule"
+			measure = "N"
+			dsversion = "2014"
+			accessdate = "20190420"
+			product = 'ne-graticule'
+			theme = "graticule"
+			subtheme = "lonlat"
+			copyright = ""
+			dataurl = ""
+			metapath =""
+			metaurl=""
+			title = "Graticule longitue latitude"
+			label = "Graticule longitue latitude at 1 degree"
+		></srcraw>
+		<dstcomp>
+			<graticules-20deg masked='Y'  measure = "N" source = "naturalearth" product = "graticules"
+			     folder = 'graticulse' band = "graticules-20deg" prefix = "graticules-20deg" suffix = "0"
+			     scalefac = "1" offsetadd = "0" dataunit = "none" celltype = 'vector' cellnull = '-32768'>
+			</graticules-20deg>
+		</dstcomp>
+		
+		<srcraw id='graticules-30deg'
+			datadir ='ANCILIMPORT/NaturalEarth/110m_physical'
+			datafile = "ne_110m_graticules_30"
+			datalayer = "graticule"
+			measure = "N"
+			dsversion = "2014"
+			accessdate = "20190420"
+			product = 'ne-graticule'
+			theme = "graticule"
+			subtheme = "lonlat"
+			copyright = ""
+			dataurl = ""
+			metapath =""
+			metaurl=""
+			title = "Graticule longitue latitude"
+			label = "Graticule longitue latitude at 1 degree"
+		></srcraw>
+		<dstcomp>
+			<graticules-30deg masked='Y'  measure = "N" source = "naturalearth" product = "graticules"
+			     folder = 'graticulse' band = "graticules-30deg" prefix = "graticules-30deg" suffix = "0"
+			     scalefac = "1" offsetadd = "0" dataunit = "none" celltype = 'vector' cellnull = '-32768'>
+			</graticules-30deg>
+		</dstcomp>
+		
+	<srcraw id='graticules-45deg'
+			datadir ='ANCILIMPORT/NaturalEarth/110m_physical'
+			datafile = "ne_110m_graticules_45"
+			datalayer = "graticule"
+			measure = "N"
+			dsversion = "2014"
+			accessdate = "20190420"
+			product = 'ne-graticule'
+			theme = "graticule"
+			subtheme = "lonlat"
+			copyright = ""
+			dataurl = ""
+			metapath =""
+			metaurl=""
+			title = "Graticule longitue latitude"
+			label = "Graticule longitue latitude at 1 degree"
+		></srcraw>
+		<dstcomp>
+			<graticules-45deg masked='Y'  measure = "N" source = "naturalearth" product = "graticules"
+			     folder = 'graticulse' band = "graticules-45deg" prefix = "graticules-45deg" suffix = "0"
+			     scalefac = "1" offsetadd = "0" dataunit = "none" celltype = 'vector' cellnull = '-32768'>
+			</graticules-45deg>
+		</dstcomp>
+		
+	<srcraw id='graticules-90deg'
+			datadir ='ANCILIMPORT/NaturalEarth/110m_physical'
+			datafile = "ne_110m_graticules_90"
+			datalayer = "graticule"
+			measure = "N"
+			dsversion = "2014"
+			accessdate = "20190420"
+			product = 'ne-graticule'
+			theme = "graticule"
+			subtheme = "lonlat"
+			copyright = ""
+			dataurl = ""
+			metapath =""
+			metaurl=""
+			title = "Graticule longitue latitude"
+			label = "Graticule longitue latitude at 1 degree"
+		></srcraw>
+		<dstcomp>
+			<graticules-90deg masked='Y'  measure = "N" source = "naturalearth" product = "graticules"
+			     folder = 'graticulse' band = "graticules-90deg" prefix = "graticules-90deg" suffix = "0"
+			     scalefac = "1" offsetadd = "0" dataunit = "none" celltype = 'vector' cellnull = '-32768'>
+			</graticules-90deg>
+		</dstcomp>
+
+	</process>
+</organize>

@@ -1,0 +1,55 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "smap"
+  },
+  "period": {
+    "startyear": 2015,
+    "startmonth": 4,
+    "startday": 13,
+    "endyear": 2015,
+    "endmonth": 8,
+    "endday": 8,
+    "timestep": "1D"
+  },
+  "process": {
+    "processid": "extractSmapHdf",
+    "dsversion": "1.3",
+    "parameters": {
+      "product": "SPL3SMAP",
+      "version": "003",
+      "exploded": false,
+      "remoteuser": "Gumbricht",
+      "serverurl": "https://n5eil01u.ecs.nsidc.org/"
+    },
+    "srcpath": {
+      "volume": "karttur3tb",
+      "hdr": "h5"
+    },
+    "dstpath": {
+      "volume": "karttur3tb"
+    }
+  },
+  "processx": {
+    "processid": "extractSmapHdf",
+    "dsversion": "1.3",
+    "parameters": {
+      "product": "SPL3SMA",
+      "version": "003",
+      "exploded": false,
+      "remoteuser": "Gumbricht",
+      "serverurl": "https://n5eil01u.ecs.nsidc.org/"
+    },
+    "srcpath": {
+      "volume": "karttur3tb",
+      "hdr": "h5"
+    },
+    "dstpath": {
+      "volume": "karttur3tb"
+    }
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "system"
+  },
+  "period": {
+    "timestep": "static"
+  },
+  "process": [
+    {
+      "processid": "AddRasterPalette",
+      "overwrite": true,
+      "parameters": {
+        "palette": "smap",
+        "compid": "test",
+        "setcolor": {
+          "0": {
+            "red": "255",
+            "green": "132",
+            "blue": "94",
+            "alpha": "0",
+            "label": "0",
+            "hint": "0"
+          },
+          "25": {
+            "red": "240",
+            "green": "224",
+            "blue": "148",
+            "alpha": "0",
+            "label": "10",
+            "hint": "NA"
+          },
+          "50": {
+            "red": "162",
+            "green": "162",
+            "blue": "122",
+            "alpha": "0",
+            "label": "50",
+            "hint": "no correlation"
+          },
+          "100": {
+            "red": "70",
+            "green": "89",
+            "blue": "112",
+            "alpha": "0",
+            "label": "100",
+            "hint": "positive correclation"
+          },
+          "150": {
+            "red": "20",
+            "green": "60",
+            "blue": "210",
+            "alpha": "0",
+            "label": "150",
+            "hint": "positive correclation"
+          },
+          "200": {
+            "red": "2",
+            "green": "1",
+            "blue": "190",
+            "alpha": "0",
+            "label": "200",
+            "hint": "strong positive correlation"
+          },
+          "250": {
+            "red": "2",
+            "green": "1",
+            "blue": "190",
+            "alpha": "0",
+            "label": "250",
+            "hint": "strong positive correlation"
+          },
+          "253": {
+            "red": "245",
+            "green": "237",
+            "blue": "182",
+            "alpha": "0",
+            "label": "dry (0)",
+            "hint": "completely dry"
+          },
+          "254": {
+            "red": "32",
+            "green": "32",
+            "blue": "32",
+            "alpha": "255",
+            "label": "frame",
+            "hint": "frame"
+          },
+          "255": {
+            "red": "250",
+            "green": "250",
+            "blue": "250",
+            "alpha": "255",
+            "label": "255",
+            "hint": "no data"
+          }
+        }
+      }
+    },
+    {
+      "processid": "AddRasterPalette",
+      "overwrite": true,
+      "parameters": {
+        "palette": "smapdelta",
+        "compid": "test",
+        "setcolor": {
+          "0": {
+            "red": "200",
+            "green": "50",
+            "blue": "0",
+            "alpha": "0",
+            "label": "0",
+            "hint": "strongly negative correlation"
+          },
+          "62": {
+            "red": "255",
+            "green": "225",
+            "blue": "30",
+            "alpha": "0",
+            "label": "63",
+            "hint": "negative correlation"
+          },
+          "125": {
+            "red": "190",
+            "green": "190",
+            "blue": "190",
+            "alpha": "0",
+            "label": "125",
+            "hint": "positive correclation"
+          },
+          "187": {
+            "red": "20",
+            "green": "110",
+            "blue": "200",
+            "alpha": "0",
+            "label": "188",
+            "hint": "strong positive correlation"
+          },
+          "250": {
+            "red": "2",
+            "green": "1",
+            "blue": "143",
+            "alpha": "0",
+            "label": "250",
+            "hint": "strong positive correlation"
+          },
+          "253": {
+            "red": "245",
+            "green": "237",
+            "blue": "182",
+            "alpha": "0",
+            "label": "dry (0)",
+            "hint": "completely dry"
+          },
+          "254": {
+            "red": "32",
+            "green": "32",
+            "blue": "32",
+            "alpha": "255",
+            "label": "frame",
+            "hint": "frame"
+          },
+          "255": {
+            "red": "250",
+            "green": "250",
+            "blue": "250",
+            "alpha": "255",
+            "label": "255",
+            "hint": "no data"
+          }
+        }
+      }
+    },
+    {
+      "processid": "AddRasterPalette",
+      "overwrite": true,
+      "parameters": {
+        "palette": "smapstd",
+        "compid": "test",
+        "access": "A",
+        "default": false,
+        "setcolor": {
+          "0": {
+            "red": "200",
+            "green": "200",
+            "blue": "200",
+            "alpha": "0",
+            "label": "125",
+            "hint": "positive correclation"
+          },
+          "50": {
+            "red": "240",
+            "green": "224",
+            "blue": "148",
+            "alpha": "0",
+            "label": "188",
+            "hint": "strong positive correlation"
+          },
+          "100": {
+            "red": "162",
+            "green": "162",
+            "blue": "122",
+            "alpha": "0",
+            "label": "188",
+            "hint": "strong positive correlation"
+          },
+          "150": {
+            "red": "70",
+            "green": "89",
+            "blue": "112",
+            "alpha": "0",
+            "label": "250",
+            "hint": "strong positive correlation"
+          },
+          "200": {
+            "red": "20",
+            "green": "60",
+            "blue": "210",
+            "alpha": "0",
+            "label": "250",
+            "hint": "strong positive correlation"
+          },
+          "250": {
+            "red": "2",
+            "green": "1",
+            "blue": "190",
+            "alpha": "0",
+            "label": "250",
+            "hint": "strong positive correlation"
+          },
+          "253": {
+            "red": "245",
+            "green": "237",
+            "blue": "182",
+            "alpha": "0",
+            "label": "dry (0)",
+            "hint": "completely dry"
+          },
+          "254": {
+            "red": "32",
+            "green": "32",
+            "blue": "32",
+            "alpha": "255",
+            "label": "frame",
+            "hint": "frame"
+          },
+          "255": {
+            "red": "250",
+            "green": "250",
+            "blue": "250",
+            "alpha": "255",
+            "label": "255",
+            "hint": "no data"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<searchsmap>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+	<period startyear = '2001' endyear = '2018' timestep='1D'></period>
+
+	<process processid ='SearchSmapProducts' dsversion = '1.3'>
+		<parameters remoteuser='Gumbricht' product="SPL3SMP_E" version="002" serverurl="https://n5eil01u.ecs.nsidc.org/" ></parameters>
+		<dstpath volume = "Karttur2tb" mainpath = "/Volumes/Karttur2tb/Downloads/SMAP" hdrfiletype = "shp" datfiletype = "shp"></dstpath>
+	</process>
+	
+</searchsmap>
+

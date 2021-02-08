@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<runprocess>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+	<period startyear = "2015" startmonth='1' startday='1' endyear = "2018" endmonth='12' endday='31' timestep='seasonal-16D'></period>	
+	
+	<!-- exporttobyte avg A -->
+	<process processid = 'movieclocksmap' version = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters name = 'smap' width = '900'></parameters>		
+		<dstpath volume = "/Users/thomasgumbricht/movieclock" hdrfiletype = 'png' datfiletype = 'png'></dstpath>    	
+		<dstcomp>			
+			<soil-moisture-avg id = 'layer3' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg-16D-sesn" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005">
+			</soil-moisture-avg>    	
+		</dstcomp>	
+	</process>
+
+</runprocess>
+
+

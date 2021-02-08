@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='utf-8'?>
+<organize>
+	<userproject userid = 'thomasg' projectid = 'karttur' tractid= 'system' siteid = '*' plotid = '*' system = 'system'></userproject>
+	<path></path>
+
+	<process processid ='organizeancillary' dsversion = '3.0'>
+		<parameters 
+		epsg = '4326' 
+		instid = 'gghydro' 
+		dsname  = 'GlobalHydrographicData' 
+		source = 'gghydro'
+		dsversion = "2.3.1"
+		accessdate = "2007"
+		regionid = 'global' 
+		regioncat = 'global' 
+		replacestr = '' 
+		replacetag = ''
+		datadir ='gghydro' 
+		datafile =''
+		metapath ="gghydro/metadata" 
+    	dataurl = "" 
+    	metaurl= "" 
+    	title = "GGHYDRO - Global Hydrographic Data"
+    	label = "gghydro is a dataset covering the entire surface of the Earth and containing hydrographic data on the areal extent of different kinds of terrain, and on the distribution of mean terrestrial surface runoff."
+		> </parameters>
+		
+		<srcpath volume = "Pegasus6" hdrfiletype = "lis" datfiletype = "lis"></srcpath>
+		<dstpath volume = 'Pegasus6' hdrfiletype = "tif" datfiletype = "tif"></dstpath>
+				  	
+    	<rsrcraw id="ggh-largebasins"			
+    		datadir = "gghydro"
+    		datafile = "gghbas1"
+    		datalayer = "largebasin"
+    		measure = "N" 
+    		dsversion = "2.3.1"
+    		accessdate = "20160923"
+    		product = "gghydro"
+    		theme = "hydrology"
+    		subtheme = "largebasins"
+    		copyright = ""
+    		title = "major drainage basins"
+    		label = "major drainage basins"
+    	></rsrcraw>
+    	<dstcomp>
+			<nggh-largebasins masked='Y' source = "gghydro" product = "gghydro" folder = "hydrology" 
+			band = "ggh-largebasins" prefix = "largebasins" suffix = "_v231" 
+			scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N">
+			</ggh-largebasins>
+		</dstcomp>
+    
+    	<rsrcraw id="ggh-smallbasins"
+    	datadir = "gghydro"
+    	datafile = "gghbas2"
+    	datalayer = "smallbasin" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "smallbasins"
+    	copyright = ""
+    	title = "minor drainage basins"
+    	label = "minor drainage basins"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-smallbasins" prefix = "smallbasins" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N"></compout>
+
+		<rsrcraw id="ggh-saltmarsh"
+		datadir = "gghydro"
+    	datafile = "gghsmrs"
+    	datalayer = "saltmarsh"
+    	measure = "N" 
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "saltmarsh"
+    	copyright = ""
+    	title = "saltmarsh"
+    	label = "saltmarsh"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-saltmarsh" prefix = "saltmarsh" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette='percentwaternd'></compout>
+	
+		<rsrcraw id="ggh-sanddunes"
+		datadir = "gghydro"
+    	datafile = "gghdune"
+    	datalayer = "sanddune" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "sanddunes"
+    	copyright = ""
+    	title = "sand ddunes"
+    	label = "sand dunes"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-sanddunes" prefix = "sanddunes" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette='percentwaternd'></compout>
+
+		<rsrcraw id="ggh-glaciers"
+		datadir = "gghydro"
+    	datafile = "gghglac"
+    	datalayer = "glacier"
+    	measure = "N" 
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "glaciers"
+    	copyright = ""
+    	title = "Glaciers"
+    	label = "Glacier ice, including shelf ice but excluding pack ice"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-glaciers" prefix = "glaciers" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette='percentwaternd'></compout>
+
+		<rsrcraw id="ggh-intermittlakes"
+		datadir = "gghydro"
+    	datafile = "gghilak"
+    	datalayer = "intermittlake"
+    	measure = "N" 
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "intermittent waterbodies"
+    	copyright = ""
+    	title = "Intermittent water bodies"
+    	label = "Intermittent water bodies, whether salty or fresh"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-intermittlakes" prefix = "intermittlakes" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette='percentwaternd'></compout>
+
+		<rsrcraw id="ggh-intermittrivers"
+		datadir = "gghydro"
+    	datafile = "gghiriv"
+    	datalayer = "intermittriver" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "intermittent rivers"
+    	copyright = ""
+    	title = "Intermittent rivers"
+    	label = "Intermittent rivers"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-intermittrivers" prefix = "intermittrivers" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette='percentwaternd'></compout>
+
+		<rsrcraw id="ggh-oceansaltwater"
+		datadir = "gghydro"
+    	datafile = "gghocea"
+    	datalayer = "ocean" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "oceansaltwater"
+    	copyright = ""
+    	title = "Ocean"
+    	label = "Salt water of the ocean"
+    	></rsrcraw>
+    	
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-oceansaltwater" prefix = "oceansaltwater" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette='percentwaternd'></compout>
+
+		<rsrcraw id="ggh-saltlakes"
+		datadir = "gghydro"
+    	datafile = "gghslak"
+    	datalayer = "saltlake" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "salt lakes"
+    	copyright = ""
+    	title = "Salt lakes"
+    	label = "Salt lakes"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-saltlakes" prefix = "saltlakes" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette='percentwaternd'></compout>
+
+		<rsrcraw id="ggh-saltflats"
+		datadir = "gghydro"
+    	datafile = "gghsflt"
+    	datalayer = "saltflats" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "salt flats"
+    	copyright = ""
+    	title = "Salt flats"
+    	label = "Salt flats"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-saltflats" prefix = "saltflats" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette='percentwaternd'></compout>
+
+
+		<rsrcraw id="ggh-icerunoff"
+		datadir = "gghydro"
+    	datafile = "gghrice"
+    	datalayer = "icerunoff" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "ice runoff"
+    	copyright = ""
+    	title = "Runoff of ice"
+    	label = "Runoff of ice in kg / (m2 a1)"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-icerunoff" prefix = "icerunoff" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Int16' cellnull = '0' dataunit = "class" measure = "N"></compout>
+
+		<rsrcraw id="ggh-runoffrmse"
+		datadir = "gghydro"
+    	datafile = "gghrner"
+    	datalayer = "runoffrmse" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "runoff error"
+    	copyright = ""
+    	title = "Runoff root-mean-square error"
+    	label = "Estimated root-mean-square error, in percent, of runoff"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-runoffrmse" prefix = "runoffrmse" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Int16' cellnull = '0' dataunit = "class" measure = "N"></compout>
+
+		<rsrcraw id="ggh-surfacerunoff"
+		datadir = "gghydro"
+    	datafile = "gghrnof"
+    	datalayer = "runoff" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "runoff"
+    	copyright = ""
+    	title = "Runoff"
+    	label = "Runoff in kg / (m2 a1)"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-surfacerunoff" prefix = "surfacerunoff" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Int16' cellnull = '0' dataunit = "class" measure = "N"></compout>
+
+		<rsrcraw id="ggh-cryosphere"
+		datadir = "gghydro"
+    	datafile = "gghcryo"
+    	datalayer = "cryosphere" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "cryosphere"
+    	copyright = ""
+    	title = "Cryosphere"
+    	label = "main features of the cryosphere"   	
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-cryosphere" prefix = "cryosphere" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N"></compout>
+
+		<rsrcraw id="ggh-perennrivers"
+		datadir = "gghydro"
+    	datafile = "gghfriv"
+    	datalayer = "perennrivers" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "perennial rivers"
+    	copyright = ""
+    	title = "perennial rivers"
+    	label = "perennial rivers"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-perennrivers" prefix = "perennrivers" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette='percentwaternd'></compout>
+
+		<rsrcraw id="ggh-perennlakes"
+		datadir = "gghydro"
+    	datafile = "gghflak"
+    	datalayer = "perennlakes" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "perennial lakes"
+    	copyright = ""
+    	title = "perennial lakes"
+    	label = "perennial lakes"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-perennlakes" prefix = "perennlakes" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette='percentwaternd'></compout>
+
+		<rsrcraw id="ggh-dryland"
+		datadir = "gghydro"
+    	datafile = "gghland"
+    	datalayer = "drylandmask" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "landmask"
+    	copyright = ""
+    	title = "Terrestrial land"
+    	label = "Exposed land not covered by swamp, water bodies, glacier ice, sand dunes, saltmarsh or salt flats"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-dryland" prefix = "dryland" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette = 'percentwaternd'></compout>
+
+		<rsrcraw id="ggh-landmask"
+		datadir = "gghydro"
+    	datafile = "gghms05"
+    	datalayer = "hydrology" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "land mask"
+    	copyright = ""
+    	title = "Land mask"
+    	label = "5-percent land mask"
+
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-landmask" prefix = "landmask" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N"></compout>
+
+		<rsrcraw id="ggh-swamp"
+		datadir = "gghydro"
+    	datafile = "gghswmp"
+    	datalayer = "swamp" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "wetlands"
+    	copyright = ""
+    	title = "Wetlands"
+    	label = "Swamp, marsh and other wetlands"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-swamp" prefix = "swamp" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette = 'percentwaternd'></compout>
+
+		<rsrcraw id="ggh-terrestrial"
+		datadir = "gghydro"
+    	datafile = "gghdsrf"
+    	datalayer = "terrestrial"
+    	measure = "N" 
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "terrestrial"
+    	copyright = ""
+    	title = "Drylands + Wetlands"
+    	label = "Land+Swamp+Sand dunes+Saltmarsh"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-terrestrial" prefix = "terrestrial" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette='percentwaternd'></compout>
+
+
+		<rsrcraw id="ggh-saltwater"
+		datadir = "gghydro"
+    	datafile = "gghsltw"
+    	datalayer = "saltwater" 
+    	measure = "N"
+    	dsversion = "2.3.1"
+    	accessdate = "20160923"
+    	product = "gghydro"
+    	theme = "hydrology"
+    	subtheme = "saltwater"
+    	copyright = ""
+    	title = "Salt water"
+    	label = "Salt water, whether marine or terrestrial"
+    	></rsrcraw>
+    	<compout source = "gghydro" product = "gghydro" folder = "hydrology" band = "ggh-saltwater" prefix = "saltwater" suffix = "_v231" scalefac = "1" offsetadd = "0" celltype = 'Byte' cellnull = '0' dataunit = "class" measure = "N" palette='percentwaternd'></compout>
+	</process>	
+</organize>

@@ -1,0 +1,34 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "smap"
+  },
+  "period": {
+    "startyear": 2015,
+    "startmonth": 3,
+    "startday": 31,
+    "endyear": 2021,
+    "endmonth": 1,
+    "endday": 1,
+    "timestep": "1D"
+  },
+  "process": [
+    {
+      "processid": "SmapSearchToDB",
+      "overwrite": false,
+      "parameters": {
+        "product": "SPL3FTP",
+        "version": "003",
+        "serverurl": "https://n5eil01u.ecs.nsidc.org/",
+        "remoteuser": "Gumbricht"
+      },
+      "srcpath": {
+        "volume": "geoinfo2021"
+      }
+    }
+  ]
+}

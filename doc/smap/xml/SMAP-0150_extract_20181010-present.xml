@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<extractsmap>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+	<period startyear = '2018' startmonth = '10' startday = '10' endyear = '2020' endmonth = '10' endday = '10' timestep='D'></period>
+
+	<!-- gdalinfo /Volumes/africa/smap/SPL3FTP.002/region/original/global/20150413/SMAP_L3_FT_P_20150413_R16010_002.h5-->
+	<processx processid ='extractSmapHdf' dsversion = '1.3'>
+		<parameters product="SPL3FTP" version="002" exploded ='False' remoteuser='Gumbricht' serverurl="https://n5eil01u.ecs.nsidc.org/"></parameters>
+		<srcpath volume = "africa" hdrfiletype='h5'></srcpath>
+		<dstpath volume = "africa"></dstpath>
+	</processx>
+	
+	<!-- gdalinfo /Volumes/africa/smap/SPL3FTP-E.002/region/original/global/20150413/SMAP_L3_FT_P_E_20150413_R16010_001.h5-->
+	<processx processid ='extractSmapHdf' dsversion = '1.3'>
+		<parameters product="SPL3FTP-E" version="002" exploded ='False' remoteuser='Gumbricht' serverurl="https://n5eil01u.ecs.nsidc.org/"></parameters>
+		<srcpath volume = "africa" hdrfiletype='h5'></srcpath>
+		<dstpath volume = "africa"></dstpath>
+	</processx>
+	
+	<!-- gdalinfo /Volumes/africa/smap/SPL3SMP.005/region/original/global/20150413/SMAP_L3_SM_P_20150413_R16010_001.h5-->
+	<process processid ='extractSmapHdf' dsversion = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters product="SPL3SMP" version="005" exploded ='False' remoteuser='Gumbricht' serverurl="https://n5eil01u.ecs.nsidc.org/"></parameters>
+		<srcpath volume = "africa" hdrfiletype='h5'></srcpath>
+		<dstpath volume = "africa"></dstpath>
+	</process>
+	
+	<!-- gdalinfo /Volumes/africa/smap/SPL3SMP-E.005/region/original/global/20150413/SMAP_L3_SM_P_20150413_R16010_001.h5-->
+	<process processid ='extractSmapHdf' dsversion = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters product="SPL3SMP-E" version="002" exploded ='False' remoteuser='Gumbricht' serverurl="https://n5eil01u.ecs.nsidc.org/"></parameters>
+		<srcpath volume = "africa" hdrfiletype='h5'></srcpath>
+		<dstpath volume = "africa"></dstpath>
+	</process>
+
+	
+</extractsmap>
+
+
+

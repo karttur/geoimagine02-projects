@@ -1,0 +1,273 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "smap"
+  },
+  "period": {
+    "startyear": 2015,
+    "startmonth": 4,
+    "startday": 13,
+    "endyear": 2018,
+    "endmonth": 12,
+    "endday": 31,
+    "timestep": "1D"
+  },
+  "process": [
+    {
+      "processid": "UpdateDbRegion",
+      "overwrite": false,
+      "verbose": 3,
+      "parameters": null,
+      "dstpath": {
+        "volume": "SMAP",
+        "hdr": "tif"
+      },
+      "dstcomp": [
+        {
+          "soil-moisture-am": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-am",
+            "layerid": "soil-moisture-am",
+            "prefix": "soil-moisture-am",
+            "suffix": "005",
+            "celltype": "raster",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "cm**3/cm**3",
+            "measure": "R",
+            "cellnull": 0
+          },
+          "soil-moisture-pm": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-pm",
+            "layerid": "soil-moisture-pm",
+            "prefix": "soil-moisture-pm",
+            "suffix": "005",
+            "celltype": "raster",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "cm**3/cm**3",
+            "measure": "R",
+            "cellnull": 0
+          }
+        }
+      ]
+    },
+    {
+      "processid": "UpdateDbRegion",
+      "overwrite": false,
+      "parameters": null,
+      "verbose": 3,
+      "dstpath": {
+        "volume": "karttur3tb",
+        "hdr": "tif"
+      },
+      "dstcomp": [
+        {
+          "soil-moisture-am": {
+            "source": "SPL3SMP-E.002",
+            "product": "SPL3SMP-E",
+            "content": "soil-moisture-am",
+            "layerid": "soil-moisture-am",
+            "prefix": "soil-moisture-am",
+            "suffix": "002",
+            "celltype": "raster",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "cm**3/cm**3",
+            "measure": "R",
+            "cellnull": 0
+          },
+          "soil-moisture-pm": {
+            "source": "SPL3SMP-E.002",
+            "product": "SPL3SMP-E",
+            "content": "soil-moisture-pm",
+            "layerid": "soil-moisture-pm",
+            "prefix": "soil-moisture-pm",
+            "suffix": "002",
+            "celltype": "raster",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "cm**3/cm**3",
+            "measure": "R",
+            "cellnull": 0
+          }
+        }
+      ]
+    },
+    {
+      "processid": "UpdateDbRegion",
+      "overwrite": false,
+      "parameters": null,
+      "verbose": 3,
+      "dstpath": {
+        "volume": "karttur3tb",
+        "hdr": "tif"
+      },
+      "dstcomp": [
+        {
+          "soil-moisture-avg": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-avg",
+            "layerid": "soil-moisture-avg",
+            "prefix": "soil-moisture-avg",
+            "suffix": "005",
+            "celltype": "raster",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "cm**3/cm**3",
+            "measure": "R",
+            "cellnull": 0
+          }
+        }
+      ]
+    },
+    {
+      "processid": "UpdateDbRegion",
+      "overwrite": false,
+      "parameters": null,
+      "verbose": 3,
+      "dstpath": {
+        "volume": "karttur3tb",
+        "hdr": "tif"
+      },
+      "dstcomp": [
+        {
+          "soil-moisture-min": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-min",
+            "layerid": "soil-moisture-min",
+            "prefix": "soil-moisture-min",
+            "suffix": "005",
+            "celltype": "raster",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "cm**3/cm**3",
+            "measure": "R",
+            "cellnull": 0
+          }
+        }
+      ]
+    },
+    {
+      "processid": "UpdateDbRegion",
+      "overwrite": false,
+      "parameters": null,
+      "verbose": 3,
+      "dstpath": {
+        "volume": "karttur3tb",
+        "hdr": "tif"
+      },
+      "dstcomp": [
+        {
+          "soil-moisture-max": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-max",
+            "layerid": "soil-moisture-max",
+            "prefix": "soil-moisture-max",
+            "suffix": "005",
+            "celltype": "raster",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "cm**3/cm**3",
+            "measure": "R",
+            "cellnull": 0
+          }
+        }
+      ]
+    },
+    {
+      "processid": "UpdateDbRegion",
+      "overwrite": false,
+      "parameters": null,
+      "verbose": 3,
+      "dstpath": {
+        "volume": "karttur3tb",
+        "hdr": "tif"
+      },
+      "dstcomp": [
+        {
+          "soil-moisture-avg": {
+            "source": "SPL3SMP-E.002",
+            "product": "SPL3SMP-E",
+            "content": "soil-moisture-avg",
+            "layerid": "soil-moisture-avg",
+            "prefix": "soil-moisture-avg",
+            "suffix": "002",
+            "celltype": "raster",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "cm**3/cm**3",
+            "measure": "R",
+            "cellnull": 0
+          }
+        }
+      ]
+    },
+    {
+      "processid": "UpdateDbRegion",
+      "overwrite": false,
+      "parameters": null,
+      "verbose": 3,
+      "dstpath": {
+        "volume": "karttur3tb",
+        "hdr": "tif"
+      },
+      "dstcomp": [
+        {
+          "soil-moisture-min": {
+            "source": "SPL3SMP-E.002",
+            "product": "SPL3SMP-E",
+            "content": "soil-moisture-min",
+            "layerid": "soil-moisture-min",
+            "prefix": "soil-moisture-avg",
+            "suffix": "002",
+            "celltype": "raster",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "cm**3/cm**3",
+            "measure": "R",
+            "cellnull": 0
+          }
+        }
+      ]
+    },
+    {
+      "processid": "UpdateDbRegion",
+      "overwrite": false,
+      "parameters": null,
+      "verbose": 3,
+      "dstpath": {
+        "volume": "karttur3tb",
+        "hdr": "tif"
+      },
+      "dstcomp": [
+        {
+          "soil-moisture-max": {
+            "source": "SPL3SMP-E.002",
+            "product": "SPL3SMP-E",
+            "content": "soil-moisture-max",
+            "layerid": "soil-moisture-max",
+            "prefix": "soil-moisture-avg",
+            "suffix": "002",
+            "celltype": "raster",
+            "scalefac": 1,
+            "offsetadd": 0,
+            "dataunit": "cm**3/cm**3",
+            "measure": "R",
+            "cellnull": 0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "system"
+  },
+  "period": {
+    "timestep": "static"
+  },
+  "process": [
+    {
+      "processid": "AddMovieClock",
+      "overwrite": true,
+      "parameters": {
+        "name": "smap"
+      }
+    }
+  ]
+}

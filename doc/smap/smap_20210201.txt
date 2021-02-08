@@ -1,0 +1,158 @@
+###################################
+###################################
+###             SMAP            ###
+###################################
+###################################
+
+###################################
+###             Layout          ###
+###################################
+
+## Create scaling for smap compids ##
+#OK# json/SMAP-0001_CreatesScaling_v090.json
+
+## Create palettes for smap ##
+#OK# json/SMAP-0002_CreatePalettes_v090.json
+
+## Create legend for smap ##
+#OK# json/SMAP-0003_CreateLegends_v090.json
+
+## Create movie clock for smap##
+#OK# json/SMAP-0004_CreateMovieClock_v090.json
+
+###################################
+###          Update db          ###
+###################################
+
+## If you have access to SMAP data created by karttur's Geoimagine Framework ##
+## you can access the data from your Framework installation by updating the db ##
+## You can also use updatedb to clean your database and/or delete files from your Framework organized storage ##
+
+#Update db - updates the db for all daily (D) smap data
+#OK# json/SMAP-0040_udatedb_D_20150331-present_v090.json
+
+#Update 16D
+#OK# json/smap-0040_udatedb_16D_20150423-present_v090.json
+
+###################################
+### Search, download & extract  ###
+###################################
+
+## Search DAAC for SMAP products ##
+
+#OK# json/SMAP-0100_search-daac-SPL3FTP_2015-present_v090.json
+
+#OK# json/SMAP-0100_search-daac-SPL3FTP-E_2015-present_v090.json
+
+#OK# json/SMAP-0100_search-daac-SPL3SMP_2015-present_v090.json
+
+#OK# json/SMAP-0100_search-daac-SPL3SMP-E_2015-present_v090.json
+
+#OK# json/SMAP-0100_search-daac_SPL3SMA_20150413-20150707_v090.json
+
+#OK# json/SMAP-0100_search-daac_SPL3SMAP_20150413-20150707_v090.json
+
+## Transfer search results to db ##
+
+#OK# json/SMAP-0110_search-todb_SPL3FTP_2015-present_v090.json
+
+#OK# json/SMAP-0110_search-todb_SPL3FTP-E_2015-present_v090.json
+
+#OK# json/SMAP-0110_search-todb_SPL3SMP_2015-present_v090.json
+
+#OK# json/SMAP-0110_search-todb_SPL3SMP-E_2015-present_v090.json
+
+#OK# json/SMAP-0110_search-todb_SPL3SMA_20150413-20150707_v090.json
+
+#OK# json/SMAP-0110_search-todb_SPL3SMAP_20150413-20150707_v090.json
+
+## Check the db for downloaded and extracted tiles ##
+
+#Should be done before any downloading
+#SMAP-0115_check.xml
+
+## Download the SMAP data from DAAC ##
+
+#OK# json/SMAP-0120_download_SPL3FTP_2015-present_v090.json
+
+json/SMAP-0120_download_SPL3FTP-E_2015-present_v090.json
+
+#### SMAP-0120_download_20150413-20150807_v090.json
+
+#### SMAP-0120_download_20150331-20181231_v090.json
+#OK# SMAP-0120_download_2019-present_v090.json
+
+## Check the db for downloaded and extracted tiles (rerun)  ##
+#SMAP-0115_check.xml
+
+## Extract SMAP HDF files ##
+#SMAP-0150_extract_20150413-20150807.xml
+#SMAP-0150_extract_20150331-20181231.xml
+#SMAP-0150_extract_2019-present.xml
+
+###################################
+###       Overlay special       ###
+###################################
+
+## Overlay to daily data ##
+#SMAP-0240_overlaydaily_20150331-20181231.xml
+#SMAP-0240_overlaydaily_20190101-present.xml
+
+###################################
+###   Time series resampling    ###
+###################################
+
+## Resample to 16 D intervals ##
+## Do one year at a time ##
+#SMAP-0310_tsresample-16D_2015.xml
+#SMAP-0310_tsresample-16D_2016.xml
+#SMAP-0310_tsresample-16D_2017.xml
+#SMAP-0310_tsresample-16D_2018.xml
+#SMAP-0310_tsresample-16D_2019.xml
+
+## Resample to monthly intervals ##
+## Do one year at a time ##
+#SMAP-0310_tsresample-M_2015.xml
+#SMAP-0310_tsresample-M_2016.xml
+#SMAP-0310_tsresample-M_2017.xml
+#SMAP-0310_tsresample-M_2018.xml
+#SMAP-0310_tsresample-M_2019.xml
+
+###################################
+###       Extract season        ###
+###################################
+
+## Extract seasonal signal ##
+#SMAP-0320_extract-season_16D.xml
+
+###################################
+###  Interpolate with seasons   ###
+###################################
+
+## Interpolate nodata supported with seasonal signal ##
+#SMAP-0330_interpolseasn_16D_2015-2019.xml
+
+###################################
+###        Export media         ###
+###################################
+
+## Export 16D SMAP ##
+#SMAP-0900_ExporttoByte_16D.xml
+
+## Export seasonal signals 16D ##
+#SMAP-0905_ExporttoByte_16D-seasons.xml
+
+## Export graticule vectors ##
+#SMAP-0925_graticule_ExporttoSVG.xml
+
+###################################
+###            Movie            ###
+###################################
+
+## Create image frames ##
+#SMAP-0950_movieframes_16D-seasons.xml
+#SMAP-0950_movieframes_16D.xml
+
+## Create clock frames and movie ##
+#SMAP-0960_movieclock_16D-seasons.xml
+#SMAP-0960_movieclock_16D

@@ -1,0 +1,51 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "smap"
+  },
+  "period": {
+    "startyear": 201",
+    "startmonth": 4,
+    "startday": 23,
+    "endyear": 2018,
+    "endmonth": 12,
+    "endday": 31,
+    "timestep": "16D"
+  },
+  "process": {
+    "processid": "movieframesmap",
+    "overwrite": true,
+    "parameters": {
+      "name": "smap",
+      "width": "800",
+      "crop": "800,336,0,0",
+      "emboss": "KARTTUR",
+      "embossdims": "720,150",
+      "embossptsize": "100"
+    },
+    "srcpath": {
+      "volume": "karttur3tb",
+      "hdr": "tif",
+      "dat": "tif"
+    },
+    "dstpath": {
+      "volume": "/Users/thomasgumbricht/movieclock",
+      "hdr": "png",
+      "dat": "png"
+    },
+    "srccomp": {
+      "soil-moisture-avg": {
+        "source": "SPL3SMP.005",
+        "product": "SPL3SMP",
+        "content": "soil-moisture-avg-16D",
+        "layerid": "soil-moisture-avg",
+        "prefix": "soil-moisture-avg",
+        "suffix": "005"
+      }
+    }
+  }
+}

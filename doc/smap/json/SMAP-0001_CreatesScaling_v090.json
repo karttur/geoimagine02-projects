@@ -1,0 +1,175 @@
+{
+  "userproject": {
+    "userid": "karttur",
+    "projectid": "karttur",
+    "tractid": "karttur",
+    "siteid": "*",
+    "plotid": "*",
+    "system": "system"
+  },
+  "period": {
+    "timestep": "static"
+  },
+  "process": [
+    {
+      "processid": "CreateScaling",
+      "overwrite": true,
+      "parameters": {
+        "scalefac": "200",
+        "mirror0": false
+      },
+      "comp": [
+        {
+          "1": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-am",
+            "layerid": "soil-moisture-am",
+            "prefix": "soil-moisture-am",
+            "suffix": "005"
+          }
+        },
+        {
+          "2": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-pm",
+            "layerid": "soil-moisture-pm",
+            "prefix": "soil-moisture-pm",
+            "suffix": "005"
+          }
+        },
+        {
+          "3": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-avg",
+            "layerid": "soil-moisture-avg",
+            "prefix": "soil-moisture-avg",
+            "suffix": "005"
+          }
+        },
+        {
+          "4": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-min",
+            "layerid": "soil-moisture-min",
+            "prefix": "soil-moisture-min",
+            "suffix": "005"
+          }
+        },
+        {
+          "5": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-max",
+            "layerid": "soil-moisture-max",
+            "prefix": "soil-moisture-max",
+            "suffix": "005"
+          }
+        },
+        {
+          "11": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-am-16D",
+            "layerid": "soil-moisture-am",
+            "prefix": "soil-moisture-am",
+            "suffix": "005"
+          }
+        },
+        {
+          "12": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-pm-16D",
+            "layerid": "soil-moisture-pm",
+            "prefix": "soil-moisture-pm",
+            "suffix": "005"
+          }
+        },
+        {
+          "13": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-avg-16D",
+            "layerid": "soil-moisture-avg",
+            "prefix": "soil-moisture-avg",
+            "suffix": "005"
+          }
+        },
+        {
+          "14": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-min-16D",
+            "layerid": "soil-moisture-min",
+            "prefix": "soil-moisture-min",
+            "suffix": "005"
+          }
+        },
+        {
+          "15": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-max-16D",
+            "layerid": "soil-moisture-max",
+            "prefix": "soil-moisture-max",
+            "suffix": "005"
+          }
+        },
+        {
+          "21": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-am-16D-sesn",
+            "layerid": "soil-moisture-am",
+            "prefix": "soil-moisture-am",
+            "suffix": "005"
+          }
+        },
+        {
+          "22": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-pm-16D-sesn",
+            "layerid": "soil-moisture-pm",
+            "prefix": "soil-moisture-pm",
+            "suffix": "005"
+          }
+        },
+        {
+          "23": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-avg-16D-sesn",
+            "layerid": "soil-moisture-avg",
+            "prefix": "soil-moisture-avg",
+            "suffix": "005"
+          }
+        },
+        {
+          "24": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-min-16D-sesn",
+            "layerid": "soil-moisture-min",
+            "prefix": "soil-moisture-min",
+            "suffix": "005"
+          }
+        },
+        {
+          "25": {
+            "source": "SPL3SMP.005",
+            "product": "SPL3SMP",
+            "content": "soil-moisture-max-16D-sesn",
+            "layerid": "soil-moisture-max",
+            "prefix": "soil-moisture-max",
+            "suffix": "005"
+          }
+        }
+      ]
+    }
+  ]
+}

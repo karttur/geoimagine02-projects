@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<runprocess>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+	<period startyear = "2016" startmonth='1' startday='22' endyear = "2016" endmonth='1' endday='23' timestep='D'></period>	
+	
+	<!-- exporttobyte avg A -->
+	<process processid = 'exporttobytesmap' version = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters palette= 'smap'></parameters>		
+		<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>    	
+		<srccomp>			
+			<soil-moisture-am id = 'layer1' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-am" band = "soil-moisture-am" prefix = "soil-moisture-am" suffix = "005">
+			</soil-moisture-am>    	
+			<soil-moisture-pm id = 'layer2' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-pm" band = "soil-moisture-pm" prefix = "soil-moisture-pm" suffix = "005">
+			</soil-moisture-pm>    	
+			<soil-moisture-avg id = 'layer3' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005">
+			</soil-moisture-avg>    	
+			<soil-moisture-min id = 'layer4' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-min" band = "soil-moisture-min" prefix = "soil-moisture-min" suffix = "005">
+			</soil-moisture-min>    	
+			<soil-moisture-max id = 'layer5' source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-max" band = "soil-moisture-max" prefix = "soil-moisture-max" suffix = "005">
+			</soil-moisture-max>    	
+
+		</srccomp>	
+	</process>
+
+</runprocess>
+
+

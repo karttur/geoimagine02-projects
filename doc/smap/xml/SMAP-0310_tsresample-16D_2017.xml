@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resampletssmap>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'smap'></userproj>
+	<period startyear = '2017' startmonth = '01' startday = '01' endyear = '2018' endmonth = '01' endday = '05' timestep='D'></period>
+	
+	<process processid ='resampletssmap' dsversion = '1.3'>
+		<overwrite>N</overwrite>
+		<parameters acceptmissing = 'True' targettimestep = '16D' startstep='1' method ='avg'></parameters>
+		<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+		<srccomp>
+			<soil-moisture-avg source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "005">	
+			</soil-moisture-avg>
+		</srccomp>
+		<dstcomp>
+			<soil-moisture-avg-16d source = "SPL3SMP.005" product = "SPL3SMP" folder = "soil-moisture-avg-16d" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "005">	
+			</soil-moisture-avg-16d>
+		</dstcomp>
+	</process>
+	
+	<process processid ='resampletssmap' dsversion = '1.3'>
+		<overwrite>N</overwrite>
+		<parameters acceptmissing = 'True' targettimestep = '16D' startstep='1' method ='avg'></parameters>
+		<srcpath volume = "africa" hdrfiletype='tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype='tif'></dstpath>
+		<srccomp>
+			<soil-moisture-avg source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg" band = "soil-moisture-avg" prefix = "soil-moisture-avg" suffix = "002">	
+			</soil-moisture-avg>
+		</srccomp>
+		<dstcomp>
+			<soil-moisture-avg-16d source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002">	
+			</soil-moisture-avg-16d>
+		</dstcomp>
+	</process>
+	
+	<!-- Freeze Thaw -->
+	<process processid ='resampletssmap' dsversion = '1.3'>
+		<overwrite>True</overwrite>
+		<acceptmissing>True</acceptmissing>
+		<parameters targettimestep = '16D' startstep='1' method ='avg'></parameters>
+		<srcpath volume = "Pegasus6" hdrfiletype='tif'></srcpath>
+		<dstpath volume = "Pegasus6" hdrfiletype='tif'></dstpath>
+		<srccomp>
+			<freeze-thaw-fraction-avg source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "freeze-thaw-avg" band = "freeze-thaw-fraction-avg" prefix = "freeze-thaw-frac-avg" suffix = "002">	
+			</freeze-thaw-fraction-avg>
+		</srccomp>
+		<dstcomp>
+			<freeze-thaw-fraction-avg-16d source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "freeze-thaw-avg-16d" band = "freeze-thaw-fraction-avg-16d" prefix = "freeze-thaw-frac-avg-16d" suffix = "002">	
+			</freeze-thaw-fraction-avg-16d>
+		</dstcomp>
+	</process>
+	
+	<!-- Vegetation Water -->
+	<process processid ='resampletssmap' dsversion = '1.3'>
+		<overwrite>N</overwrite>
+		<acceptmissing>True</acceptmissing>
+		<parameters targettimestep = '16D' startstep='1' method ='avg'></parameters>
+		<srcpath volume = "Pegasus6" hdrfiletype='tif'></srcpath>
+		<dstpath volume = "Pegasus6" hdrfiletype='tif'></dstpath>
+		<srccomp>
+			<veg-water-avg id='layersum' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "veg-water-avg" band = "veg-water-avg" prefix = "veg-water-avg" suffix = "002">	
+			</veg-water-avg>
+		</srccomp>
+		<dstcomp>
+			<veg-water-avg-16d id='layersum' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "veg-water-avg-16d" band = "veg-water-avg-16d" prefix = "veg-water-avg-16d" suffix = "002">	
+			</veg-water-avg-16d>
+		</dstcomp>
+	</process>
+	
+	<!-- Radar Water Body Fraction -->
+	<process processid ='resampletssmap' dsversion = '1.3'>
+		<overwrite>N</overwrite>
+		<acceptmissing>True</acceptmissing>
+		<parameters targettimestep = '16D' startstep='1' method ='avg'></parameters>
+		<srcpath volume = "Pegasus6" hdrfiletype='tif'></srcpath>
+		<dstpath volume = "Pegasus6" hdrfiletype='tif'></dstpath>
+		<srccomp>
+			<radar-water-body-fraction-avg id='layersum' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "water-body-fraction-avg" band = "radar-water-body-fraction-avg" prefix = "radar-water-body-fraction-avg" suffix = "002">	
+			</radar-water-body-fraction-avg>
+		</srccomp>
+		<dstcomp>
+			<radar-water-body-frac-avg-16d id='layersum' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "water-body-frac-avg-16d" band = "radar-water-body-frac-avg-16d" prefix = "radar-water-body-fract-avg-16d" suffix = "002">	
+			</radar-water-body-frac-avg-16d>
+		</dstcomp>
+	</process>
+	
+	<!-- Static Water Body Fraction -->
+	<process processid ='resampletssmap' dsversion = '1.3'>
+		<overwrite>N</overwrite>
+		<acceptmissing>True</acceptmissing>
+		<parameters targettimestep = '16D' startstep='1' method ='avg'></parameters>
+		<srcpath volume = "Pegasus6" hdrfiletype='tif'></srcpath>
+		<dstpath volume = "Pegasus6" hdrfiletype='tif'></dstpath>
+		<srccomp>
+			<static-water-body-fraction-avg id='layersum' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "water-body-fraction-avg" band = "static-water-body-fraction-avg" prefix = "static-water-body-fraction-avg" suffix = "002">	
+			</static-water-body-fraction-avg>
+		</srccomp>
+		<dstcomp>
+			<static-water-body-frac-avg-16d id='layersum' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "water-body-frac-avg-16d" band = "static-water-body-frac-avg-16d" prefix = "static-water-body-frac-avg-16d" suffix = "002">	
+			</static-water-body-frac-avg-16d>
+		</dstcomp>
+	</process>
+	
+</resampletssmap>
+
+		
