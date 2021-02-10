@@ -5,7 +5,13 @@ Created on 29 Jan 2021
 
 '''
 
+# Standard library imports
+
 from os import path
+
+from sys import exit
+
+# Third party imports
 
 from base64 import b64encode, b64decode
 
@@ -13,7 +19,7 @@ import netrc
 
 import psycopg2
 
-from sys import exit
+# Package application imports
 
 from params import JsonParams
 
@@ -24,7 +30,6 @@ from updatedb import ProcessUpdateDB
 from smap import ProcessSmap
 
 from postgresdb import ManageLayout, ManageAncillary, ManageSMAP
-
 
 class PGsession:
     """Connect to postgres server"""  

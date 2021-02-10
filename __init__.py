@@ -11,4 +11,7 @@ Thomas Gumbricht (thomas.gumbricht@karttur.com)
 """
 
 from .version import __version__, VERSION, metadataD
-from projects.process_project import SetupProcesses
+
+from .process_project import SetupProcesses
+
+__all__ = ['SetupProcesses']
