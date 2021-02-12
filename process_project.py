@@ -21,15 +21,17 @@ import psycopg2
 
 # Package application imports
 
-from params import JsonParams
+from geoimagine.params import JsonParams
 
-from layout import ProcessLayout
+from geoimagine.ancillary import ProcessAncillary
 
-from updatedb import ProcessUpdateDB
+from geoimagine.layout import ProcessLayout
 
-from smap import ProcessSmap
+from geoimagine.updatedb import ProcessUpdateDB
 
-from postgresdb import ManageLayout, ManageAncillary, ManageSMAP
+from geoimagine.smap import ProcessSmap
+
+from geoimagine.postgresdb import ManageLayout, ManageAncillary,  ManageSMAP
 
 class PGsession:
     """Connect to postgres server"""  
@@ -302,5 +304,3 @@ def SetupProcesses(docpath, projFN, db):
             else:
                 
                 print (processD[k]['PP'].rootprocid)
-                
-                SNULLE
