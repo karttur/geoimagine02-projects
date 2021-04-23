@@ -1,5 +1,5 @@
 '''
-Created on 19 Feb 2019
+Created on 4 Mar 2021
 
 @author: thomasgumbricht
 '''
@@ -16,10 +16,8 @@ if __name__ == "__main__":
     
     prodDB = 'geoimagine'   
         
-    projPath = join ('doc','smap')
+    projPath = join ('doc','TanDEMX')
     
-    projFN ='smap_20210201.txt'
+    projFN ='TanDEMX_20210318.txt'
     
-    #projFN ='smap-waterbodies-adjust_20190416.txt'
-  
     procLL = SetupProcesses(projPath, projFN, prodDB)

@@ -16,10 +16,8 @@ if __name__ == "__main__":
     
     prodDB = 'geoimagine'   
         
-    projPath = join ('doc','smap')
+    projPath = join ('doc','grace')
     
-    projFN ='smap_20210201.txt'
-    
-    #projFN ='smap-waterbodies-adjust_20190416.txt'
-  
-    procLL = SetupProcesses(projPath, projFN, prodDB)
+    projFN ='grace_20210212.txt'
+      
+    procLL = SetupProcesses(projPath, projFN, prodDB)  
